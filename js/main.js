@@ -32,11 +32,11 @@ function randomMifflin() {
 
   var request = new XMLHttpRequest();
 
-  request.open('GET', 'https://api.trakt.tv/shows/the-office/seasons/' + seasonNo + '/episodes/' + episodeNo);
+  request.open('GET', 'https://api.trakt.tv/shows/the-office/seasons/' + seasonNo + '/episodes/' + episodeNo + '?extended=full');
 
   request.setRequestHeader('Content-Type', 'application/json');
   request.setRequestHeader('trakt-api-version', '2');
-  request.setRequestHeader('trakt-api-key', '[client_id]');
+  request.setRequestHeader('trakt-api-key', 'c66faa4cdb7c9815a82e9e066821f317ebc6086a6217a1b0934169ea55fbd492');
 
   request.onreadystatechange = function () {
     if (this.readyState === 4) {
