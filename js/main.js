@@ -1,6 +1,6 @@
-
 // Listens to the Random Mifflin button.
 document.getElementById("randomMifflin").addEventListener("click", randomMifflin);
+
 //Runs the random episode selector.
 function randomMifflin() {
 
@@ -25,11 +25,11 @@ function randomMifflin() {
   } else {
     episodeNo = Math.ceil(Math.random() * 23);
   }
-//Writes the random episode info into the HTML.
+
+  //Writes the random episode info into the HTML.
   document.getElementById("episodeInfo").innerHTML = 'You may want to watch Season ' + seasonNo + ', Episode ' + episodeNo + '.';
 
-  // API Stuff
-
+  // Trakt API - Gets the information of the random episode.
   var request = new XMLHttpRequest();
 
   request.open('GET', 'https://api.trakt.tv/shows/the-office/seasons/' + seasonNo + '/episodes/' + episodeNo + '?extended=full');
@@ -49,16 +49,12 @@ function randomMifflin() {
   request.send();
 
 }
+
 // Opens the filter menu.
 function filterToggle() {
   var element = document.getElementById("filters");
   element.classList.toggle('hidden');
 }
-
-// Trying API Stuff
-
-
-
 /*
 Scott's Tots - Season 6 Episode 12
 Phyllis' Wedding - Season 3 Episode 15
