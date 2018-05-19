@@ -1,3 +1,18 @@
+/*
+To-do:
+- Exclude episodes
+- Select season: if a season is selected, generate numbers only for that season. Also, disable options for episodes according to the selected season.
+- Info Card: Episode's information from Trakt API.
+- Info links for the episodes: Trakt.TV - IMDB - TVDB
+- Streaming Links for the episodes: Netflix - Itunes - Amazon - Google Play Movies
+- Google Analytics
+- (Maybe) Links for purchasing BoxSet etc.
+- (Maybe) Load comments for the episode: Disqus comments can be generated. User can "Load Comments"
+- (Maybe) A quote from the episode: Can use The Office Quotes API.
+- (Maybe) Order of appearance amounts for charaters for that specific episode: Can use couple of APIs to generate. With character portraits.
+- (Maybe) 1 advertisement. Amazon Products related to The Office or Google Adsense.
+*/
+
 // Listens to the Random Mifflin button.
 document.getElementById("randomMifflin").addEventListener("click", randomMifflin);
 
@@ -55,7 +70,9 @@ function filterToggle() {
   var element = document.getElementById("filters");
   element.classList.toggle('hidden');
 }
+
 /*
+Exclude option:
 Scott's Tots - Season 6 Episode 12
 Phyllis' Wedding - Season 3 Episode 15
 Dinner Party - Season 4 Episode 13
