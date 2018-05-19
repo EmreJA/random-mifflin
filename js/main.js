@@ -42,7 +42,7 @@ function randomMifflin() {
     if (this.readyState === 4) {
       console.log('Status:', this.status);
       console.log('Headers:', this.getAllResponseHeaders());
-      console.log('Body:', this.responseText);
+      console.log('Body:', JSON.parse(this.responseText));
     }
   };
 
@@ -50,14 +50,9 @@ function randomMifflin() {
 
 }
 // Opens the filter menu.
-document.getElementById("filterToggle").addEventListener("click", filterToggle);
 function filterToggle() {
-  var x = document.getElementById('filters')
-  if (x.style.display == 'none') {
-    x.style.display = '';
-  } else {
-    x.style.display = 'none';
-  }
+  var element = document.getElementById("filters");
+  element.classList.toggle('hidden');
 }
 
 // Trying API Stuff

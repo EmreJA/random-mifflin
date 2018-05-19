@@ -43,10 +43,6 @@ footer p {
   font-size: 2em;
 }
 
-#filters {
-  display: none;
-}
-
 .filtersButton {
   text-align: center;
 }
