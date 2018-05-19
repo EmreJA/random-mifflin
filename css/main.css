@@ -1,0 +1,52 @@
+body {
+  font-family: Helvetica, sans-serif;
+  color: #262626;
+  font-size: 1em;
+  background-color: #C6BFB5;
+}
+
+h1 {
+  font-size: 5em;
+  font-weight: bold;
+}
+
+h2 {
+  font-size: 2em;
+  font-weight: bold;
+}
+
+p {
+  font-size: 2em;
+}
+
+.header {
+  text-align: center;
+}
+.jsRandom {
+  text-align: center;
+}
+
+form {
+  background-color: orange;
+  text-align: center;
+}
+
+footer {
+  text-align: center;
+}
+
+#randomMifflin {
+  font-size: 2em;
+}
+
+#filters {
+  display: none;
+}
+
+.filtersButton {
+  text-align: center;
+}
+
+.hidden {
+  display: none;
+}
