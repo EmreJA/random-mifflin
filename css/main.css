@@ -16,7 +16,7 @@ h2 {
 }
 
 p {
-  font-size: 2em;
+  font-size: 1em;
 }
 
 .header {
@@ -35,6 +35,10 @@ footer {
   text-align: center;
 }
 
+footer p {
+  font-size: 1em;
+}
+
 #randomMifflin {
   font-size: 2em;
 }
@@ -49,4 +53,8 @@ footer {
 
 .hidden {
   display: none;
+}
+.footerImage {
+  width: 100px;
+  vertical-align: middle;
 }
