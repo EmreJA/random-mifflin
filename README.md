@@ -1,4 +1,5 @@
-# Random Mifflin | Limitless randomness in a randomless world.
+# Random Mifflin
+## Limitless randomness in a randomless world.
 
 ### TO-DO List
 1. Season selection.
