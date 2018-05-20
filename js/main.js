@@ -43,15 +43,15 @@ function randomMifflin() {
   //Change Page Title // DONE
   var pageTitle = 'The Office | Randomizer. | ' + 'Season ' + seasonNo + ' ' + 'Episode ' + episodeNo;
   document.title = pageTitle;
-
-  //Disqus
-
   console.log(pageTitle);
+  //Change Page Title // DONE
+
+  //DISQUS
   var pageID = '01' + seasonNo + episodeNo;
   var disqus_config = function () {
-  this.page.url = 'http://127.0.0.1:3000/';  // Replace PAGE_URL with your page's canonical URL variable
-  this.page.identifier = pageID; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
-    console.log(pageID);
+    this.page.url = 'http://127.0.0.1:3000/';  // Replace PAGE_URL with your page's canonical URL variable
+    this.page.identifier = 'pageID'; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+    console.log(this.page.identifier);
   };
 
   (function() { // DON'T EDIT BELOW THIS LINE
@@ -60,6 +60,7 @@ function randomMifflin() {
   s.setAttribute('data-timestamp', +new Date());
   (d.head || d.body).appendChild(s);
   })();
+  //DISQUS
 
   // Trakt API - Gets the information of the random episode.
   var request = new XMLHttpRequest();
@@ -91,16 +92,7 @@ function filterToggle() {
   var element = document.getElementById("filters");
   element.classList.toggle('hidden');
 }
-
-
-//Disqus
-
-/**
-*  RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
-*  LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables*/
-
-
-
+// Opens the filter menu. // DONE //
 
 /*
 Exclude option:
