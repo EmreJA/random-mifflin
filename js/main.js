@@ -20,7 +20,6 @@ document.getElementById("randomMifflin").addEventListener("click", randomMifflin
 function randomMifflin() {
 
   var seasonNo = Math.ceil(Math.random() * 9);
-
   if (seasonNo == 1) {
       episodeNo = Math.ceil(Math.random() * 6);
   } else if (seasonNo == 2) {
@@ -41,8 +40,26 @@ function randomMifflin() {
     episodeNo = Math.ceil(Math.random() * 23);
   }
 
-  //Writes the random episode info into the HTML.
-  document.getElementById("episodeInfo").innerHTML = 'You may want to watch Season ' + seasonNo + ', Episode ' + episodeNo + '.';
+  //Change Page Title // DONE
+  var pageTitle = 'The Office | Randomizer. | ' + 'Season ' + seasonNo + ' ' + 'Episode ' + episodeNo;
+  document.title = pageTitle;
+
+  //Disqus
+
+  console.log(pageTitle);
+  var pageID = '01' + seasonNo + episodeNo;
+  var disqus_config = function () {
+  this.page.url = 'http://127.0.0.1:3000/';  // Replace PAGE_URL with your page's canonical URL variable
+  this.page.identifier = pageID; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+    console.log(pageID);
+  };
+
+  (function() { // DON'T EDIT BELOW THIS LINE
+  var d = document, s = d.createElement('script');
+  s.src = 'https://randommifflin.disqus.com/embed.js';
+  s.setAttribute('data-timestamp', +new Date());
+  (d.head || d.body).appendChild(s);
+  })();
 
   // Trakt API - Gets the information of the random episode.
   var request = new XMLHttpRequest();
@@ -54,22 +71,36 @@ function randomMifflin() {
   request.setRequestHeader('trakt-api-key', 'c66faa4cdb7c9815a82e9e066821f317ebc6086a6217a1b0934169ea55fbd492');
 
   request.onreadystatechange = function () {
-    if (this.readyState === 4) {
-      console.log('Status:', this.status);
-      console.log('Headers:', this.getAllResponseHeaders());
-      console.log('Body:', JSON.parse(this.responseText));
+    if (this.readyState === 4 && this.status == 200) {
+      var response = JSON.parse(this.responseText);
+      console.log(response.title);
+      console.log(response.runtime + ' mins.');
+      console.log(response.rating + '/10');
+      console.log('Aired On: ' + response.first_aired);
+      console.log('Season ' + response.season + ' ' + 'Episode ' + response.number);
+      console.log(response.overview);
     }
   };
-
   request.send();
-
 }
 
-// Opens the filter menu.
+
+
+// Opens the filter menu. // DONE //
 function filterToggle() {
   var element = document.getElementById("filters");
   element.classList.toggle('hidden');
 }
+
+
+//Disqus
+
+/**
+*  RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
+*  LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables*/
+
+
+
 
 /*
 Exclude option:

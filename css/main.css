@@ -54,3 +54,13 @@ footer p {
   width: 100px;
   vertical-align: middle;
 }
+
+.infoCard {
+  margin: auto;
+  width: 50%;
+}
+#disqus_thread{
+  margin:auto;
+  width: 40%;
+  background-color: white;
+}
