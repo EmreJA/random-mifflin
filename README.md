@@ -1,6 +1,6 @@
 # Random Mifflin | Limitless randomness in a randomless world.
 
-![alt text](https://media.giphy.com/media/y5yzypjVc9u3S/giphy.gif "The Office Gif")
+![alt text](https://media.giphy.com/media/y5yzypjVc9u3S/giphy.gif)
 
 ### TO-DO List
 1. Season selection.
