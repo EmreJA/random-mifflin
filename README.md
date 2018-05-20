@@ -1,5 +1,4 @@
-# Random Mifflin
-## Limitless randomness in a randomless world.
+# Random Mifflin | The Office Randomizer
 
 ### TO-DO List
 1. Season selection.
