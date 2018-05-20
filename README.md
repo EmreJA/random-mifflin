@@ -2,6 +2,8 @@
 
 ![alt text](https://media.giphy.com/media/y5yzypjVc9u3S/giphy.gif)
 
+<iframe src="https://giphy.com/embed/y5yzypjVc9u3S" width="480" height="270" frameBorder="0" class="giphy-embed" allowFullScreen></iframe><p><a href="https://giphy.com/gifs/y5yzypjVc9u3S">via GIPHY</a></p>
+
 ### TO-DO List
 1. Season selection.
 2. Episode exclusion.
