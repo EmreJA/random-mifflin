@@ -46,21 +46,7 @@ function randomMifflin() {
   console.log(pageTitle);
   //Change Page Title // DONE
 
-  //DISQUS
-  var pageID = '01' + seasonNo + episodeNo;
-  var disqus_config = function () {
-    this.page.url = 'http://127.0.0.1:3000/';  // Replace PAGE_URL with your page's canonical URL variable
-    this.page.identifier = 'pageID'; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
-    console.log(this.page.identifier);
-  };
 
-  (function() { // DON'T EDIT BELOW THIS LINE
-  var d = document, s = d.createElement('script');
-  s.src = 'https://randommifflin.disqus.com/embed.js';
-  s.setAttribute('data-timestamp', +new Date());
-  (d.head || d.body).appendChild(s);
-  })();
-  //DISQUS
 
   // Trakt API - Gets the information of the random episode.
   var request = new XMLHttpRequest();
@@ -93,6 +79,28 @@ function filterToggle() {
   element.classList.toggle('hidden');
 }
 // Opens the filter menu. // DONE //
+
+//Shows comments button (needs a fix. after clicking again it becomes hidden.)
+function loadComments() {
+  var element = document.getElementById("loadCom");
+  element.classList.toggle('hidden');
+}
+
+//DISQUS (Needs fixing. Page Identifier needs to be dynamically generated.)
+function loadDisqus() {
+  var disqus_config = function () {
+    this.page.identifier = ''; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+    console.log(this.page.identifier);
+  };
+
+  (function() { // DON'T EDIT BELOW THIS LINE
+  var d = document, s = d.createElement('script');
+  s.src = 'https://randommifflin.disqus.com/embed.js';
+  s.setAttribute('data-timestamp', +new Date());
+  (d.head || d.body).appendChild(s);
+  })();
+}
+//DISQUS
 
 /*
 Exclude option:

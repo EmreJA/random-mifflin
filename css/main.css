@@ -1,16 +1,16 @@
 body {
-  font-family: Helvetica, sans-serif;
   color: #262626;
-  font-size: 1em;
-  background-color: #C6BFB5;
+  font-family: 'Roboto', sans-serif;
 }
 
 h1 {
+  font-family: Helvetica, sans-serif;
   font-size: 5em;
   font-weight: bold;
 }
 
 h2 {
+  font-family: Helvetica, sans-serif;
   font-size: 2em;
   font-weight: bold;
 }
@@ -20,8 +20,10 @@ p {
 }
 
 .header {
-  text-align: center;
+  margin: auto;
+  width: 40%;
 }
+
 .jsRandom {
   text-align: center;
 }
@@ -32,7 +34,8 @@ form {
 }
 
 footer {
-  text-align: center;
+  margin: auto;
+  width: 40%;
 }
 
 footer p {
@@ -51,7 +54,7 @@ footer p {
   display: none;
 }
 .footerImage {
-  width: 100px;
+  width: 80px;
   vertical-align: middle;
 }
 
@@ -62,5 +65,4 @@ footer p {
 #disqus_thread{
   margin:auto;
   width: 40%;
-  background-color: white;
 }
