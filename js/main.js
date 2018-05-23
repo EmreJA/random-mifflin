@@ -41,7 +41,7 @@ function randomMifflin() {
   }
 
   //Change Page Title // DONE
-  var pageTitle = 'The Office | Randomizer. | ' + 'Season ' + seasonNo + ' ' + 'Episode ' + episodeNo;
+  var pageTitle = 'Random Mifflin | ' + 'Season ' + seasonNo + ' ' + 'Episode ' + episodeNo;
   document.title = pageTitle;
   console.log(pageTitle);
   //Change Page Title // DONE
