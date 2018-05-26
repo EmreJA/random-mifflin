@@ -1,12 +1,13 @@
 body {
   color: #262626;
   font-family: 'Roboto', sans-serif;
+  font-size: 1rem;
 }
 
 h1 {
-  font-family: Helvetica, sans-serif;
-  font-size: 5em;
-  font-weight: bold;
+  font-family: 'Caveat', cursive;
+  font-size: 3.75rem;
+  font-weight: 700;
 }
 
 h2 {
@@ -20,8 +21,12 @@ p {
 }
 
 .header {
-  margin: auto;
-  width: 40%;
+  position: fixed;
+  left: 0;
+  top: 0;
+  text-align: center;
+  width: 100%;
+  margin: 1rem 0;
 }
 
 .jsRandom {
@@ -35,15 +40,19 @@ form {
 
 footer {
   margin: auto;
-  width: 40%;
+  font-size: 0.875rem;
+  opacity: 0.60;
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  text-align: center;
+  width: 100%;
+  line-height: 1;
+  margin: 1rem 0;
 }
 
-footer p {
-  font-size: 1em;
-}
-
-#randomMifflin {
-  font-size: 2em;
+footer:hover {
+  opacity: 1;
 }
 
 .filtersButton {
@@ -58,11 +67,26 @@ footer p {
   vertical-align: middle;
 }
 
+
 .infoCard {
   margin: auto;
   width: 50%;
 }
+
 #disqus_thread{
   margin:auto;
   width: 40%;
+}
+
+#randomMifflin {
+  font-size: 1rem;
+  border: 0.1rem solid #262626;
+  background-color: white;
+  border-radius: 1rem;
+
+}
+
+svg{
+  width: 2rem;
+  vertical-align: middle;
 }
