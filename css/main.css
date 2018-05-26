@@ -29,6 +29,21 @@ p {
   margin: 1rem 0;
 }
 
+.middle{
+  font-size: 2em;
+  font-weight: 800;
+
+  position: fixed;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  margin: auto;
+  height: 1em;  /* the height of the text is always 1em*/
+
+  width: 100%;
+  text-align: center;
+}
+
 .jsRandom {
   text-align: center;
 }
