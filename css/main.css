@@ -20,6 +20,11 @@ p {
   font-size: 1em;
 }
 
+a {
+  text-decoration: none;
+  color: blue;
+}
+
 .header {
   position: fixed;
   left: 0;
@@ -30,9 +35,6 @@ p {
 }
 
 .middle{
-  font-size: 2em;
-  font-weight: 800;
-
   position: fixed;
   left: 0;
   top: 0;
@@ -53,9 +55,19 @@ form {
   text-align: center;
 }
 
+input{
+  font-family: 'Roboto', sans-serif;
+  font-size: 1rem;
+  color: blue;
+  border-radius: 1rem;
+  background-color: white;
+  border: 0.1rem solid blue;
+  height: 2rem;
+}
+
 footer {
   margin: auto;
-  font-size: 0.875rem;
+  font-size: 1rem;
   opacity: 0.60;
   position: fixed;
   left: 0;
@@ -82,7 +94,6 @@ footer:hover {
   vertical-align: middle;
 }
 
-
 .infoCard {
   margin: auto;
   width: 50%;
@@ -94,11 +105,14 @@ footer:hover {
 }
 
 #randomMifflin {
-  font-size: 1rem;
+  font-size: 1.5rem;
   border: 0.1rem solid #262626;
   background-color: white;
   border-radius: 1rem;
-
+  font-family: 'Roboto', sans-serif;
+  width: 15rem;
+  height: 3rem;
+  margin: 1rem 0;
 }
 
 svg{
