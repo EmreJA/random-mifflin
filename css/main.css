@@ -1,17 +1,18 @@
 body {
   color: #262626;
-  font-family: 'Roboto', sans-serif;
+  font-family: 'Open Sans', sans-serif;
   font-size: 1rem;
 }
 
 h1 {
-  font-family: 'Caveat', cursive;
-  font-size: 3.75rem;
+  font-family: 'Lora', serif;
+  font-size: 2.5rem;
+  color: blue;
+  /*font-size: 3.75rem;*/
   font-weight: 700;
 }
 
 h2 {
-  font-family: Helvetica, sans-serif;
   font-size: 2em;
   font-weight: bold;
 }
@@ -56,7 +57,7 @@ form {
 }
 
 input{
-  font-family: 'Roboto', sans-serif;
+  font-family: 'Open Sans', sans-serif;
   font-size: 1rem;
   color: blue;
   border-radius: 1rem;
@@ -106,10 +107,10 @@ footer:hover {
 
 #randomMifflin {
   font-size: 1.5rem;
-  border: 0.1rem solid #262626;
+  border: 0.2rem solid #262626;
   background-color: white;
   border-radius: 1rem;
-  font-family: 'Roboto', sans-serif;
+  font-family: 'Open Sans', sans-serif;
   width: 15rem;
   height: 3rem;
   margin: 1rem 0;
