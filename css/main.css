@@ -27,22 +27,13 @@ a {
 }
 
 .header {
-  position: fixed;
-  left: 0;
-  top: 0;
   text-align: center;
   width: 100%;
   margin: 1rem 0;
 }
 
 .middle{
-  position: fixed;
-  left: 0;
-  top: 0;
-  bottom: 0;
   margin: auto;
-  height: 1em;  /* the height of the text is always 1em*/
-
   width: 100%;
   text-align: center;
 }
@@ -85,8 +76,12 @@ footer:hover {
 
 .filtersButton {
   text-align: center;
+  margin: 1rem 0;
 }
-
+blockquote {
+    width: 50%;
+    display: inline;
+}
 .hidden {
   display: none;
 }
