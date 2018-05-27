@@ -15,11 +15,11 @@ To-do:
 
 // Listens to the Random Mifflin button.
 document.getElementById("randomMifflin").addEventListener("click", randomMifflin);
-
+var seasonNo;
 //Runs the random episode selector.
 function randomMifflin() {
 
-  var seasonNo = Math.ceil(Math.random() * 9);
+  seasonNo = Math.ceil(Math.random() * 9);
   if (seasonNo == 1) {
       episodeNo = Math.ceil(Math.random() * 6);
   } else if (seasonNo == 2) {
@@ -89,7 +89,7 @@ function loadComments() {
 //DISQUS (Needs fixing. Page Identifier needs to be dynamically generated.)
 function loadDisqus() {
   var disqus_config = function () {
-    this.page.identifier = ''; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+    this.page.identifier = '/december-2010/the-best-day-of-my-life/'; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
     console.log(this.page.identifier);
   };
 
@@ -99,6 +99,7 @@ function loadDisqus() {
   s.setAttribute('data-timestamp', +new Date());
   (d.head || d.body).appendChild(s);
   })();
+  console.log(this.page.identifier);
 }
 //DISQUS
 
