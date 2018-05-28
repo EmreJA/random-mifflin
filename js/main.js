@@ -1,6 +1,7 @@
 /*
 To-do:
 - Exclude episodes
+- URL based generation with ? and disqus comments based on url.
 - Select season: if a season is selected, generate numbers only for that season. Also, disable options for episodes according to the selected season.
 - Info Card: Episode's information from Trakt API.
 - Info links for the episodes: Trakt.TV - IMDB - TVDB
