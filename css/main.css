@@ -1,17 +1,18 @@
 body {
   color: #262626;
-  font-family: 'Roboto', sans-serif;
+  font-family: 'Open Sans', sans-serif;
   font-size: 1rem;
 }
 
 h1 {
-  font-family: 'Caveat', cursive;
-  font-size: 3.75rem;
+  font-family: 'Lora', serif;
+  font-size: 2.5rem;
+  color: blue;
+  /*font-size: 3.75rem;*/
   font-weight: 700;
 }
 
 h2 {
-  font-family: Helvetica, sans-serif;
   font-size: 2em;
   font-weight: bold;
 }
@@ -26,22 +27,13 @@ a {
 }
 
 .header {
-  position: fixed;
-  left: 0;
-  top: 0;
   text-align: center;
   width: 100%;
   margin: 1rem 0;
 }
 
 .middle{
-  position: fixed;
-  left: 0;
-  top: 0;
-  bottom: 0;
   margin: auto;
-  height: 1em;  /* the height of the text is always 1em*/
-
   width: 100%;
   text-align: center;
 }
@@ -56,7 +48,7 @@ form {
 }
 
 input{
-  font-family: 'Roboto', sans-serif;
+  font-family: 'Open Sans', sans-serif;
   font-size: 1rem;
   color: blue;
   border-radius: 1rem;
@@ -84,8 +76,12 @@ footer:hover {
 
 .filtersButton {
   text-align: center;
+  margin: 1rem 0;
 }
-
+blockquote {
+    width: 50%;
+    display: inline;
+}
 .hidden {
   display: none;
 }
@@ -106,10 +102,10 @@ footer:hover {
 
 #randomMifflin {
   font-size: 1.5rem;
-  border: 0.1rem solid #262626;
+  border: 0.2rem solid #262626;
   background-color: white;
   border-radius: 1rem;
-  font-family: 'Roboto', sans-serif;
+  font-family: 'Open Sans', sans-serif;
   width: 15rem;
   height: 3rem;
   margin: 1rem 0;
