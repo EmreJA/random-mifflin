@@ -7,12 +7,13 @@ body {
 h1 {
   font-family: 'Lora', serif;
   font-size: 2.5rem;
-  color: blue;
+  color: #5B00FF;
   /*font-size: 3.75rem;*/
   font-weight: 700;
 }
 
 h2 {
+  font-family: 'Lora', serif;
   font-size: 2em;
   font-weight: bold;
 }
@@ -23,23 +24,12 @@ p {
 
 a {
   text-decoration: none;
-  color: blue;
+  color: #5B00FF;
 }
 
 .header {
   text-align: center;
-  width: 100%;
   margin: 1rem 0;
-}
-
-.middle{
-  margin: auto;
-  width: 100%;
-  text-align: center;
-}
-
-.jsRandom {
-  text-align: center;
 }
 
 form {
@@ -50,10 +40,10 @@ form {
 input{
   font-family: 'Open Sans', sans-serif;
   font-size: 1rem;
-  color: blue;
+  color: #5B00FF;
   border-radius: 1rem;
   background-color: white;
-  border: 0.1rem solid blue;
+  border: 0.1rem solid #5B00FF;
   height: 2rem;
 }
 
@@ -76,7 +66,6 @@ footer:hover {
 
 .filtersButton {
   text-align: center;
-  margin: 1rem 0;
 }
 blockquote {
     width: 50%;
@@ -92,7 +81,8 @@ blockquote {
 
 .infoCard {
   margin: auto;
-  width: 50%;
+  width: 60%;
+  background-color: #FFD400;
 }
 
 #disqus_thread{
@@ -100,18 +90,18 @@ blockquote {
   width: 40%;
 }
 
-#randomMifflin {
-  font-size: 1.5rem;
-  border: 0.2rem solid #262626;
-  background-color: white;
-  border-radius: 1rem;
-  font-family: 'Open Sans', sans-serif;
-  width: 15rem;
+button{
   height: 3rem;
-  margin: 1rem 0;
 }
 
-svg{
-  width: 2rem;
+.material-icons {
+  font-size: 1rem;
   vertical-align: middle;
+}
+#buttonText {
+  font-size: 1.5rem;
+}
+#randomMifflin {
+  font-family: 'Open Sans', sans-serif;
+  width: 15rem;
 }

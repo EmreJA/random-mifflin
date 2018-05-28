@@ -4,6 +4,8 @@ To-do:
 - URL based generation with ? and disqus comments based on url.
 - Select season: if a season is selected, generate numbers only for that season. Also, disable options for episodes according to the selected season.
 - Info Card: Episode's information from Trakt API.
+- format dates
+- for images https://developers.themoviedb.org/3/getting-started/images see this website
 - Info links for the episodes: Trakt.TV - IMDB - TVDB
 - Streaming Links for the episodes: Netflix - Itunes - Amazon - Google Play Movies
 - Google Analytics
@@ -47,8 +49,6 @@ function randomMifflin() {
   console.log(pageTitle);
   //Change Page Title // DONE
 
-
-
   // Trakt API - Gets the information of the random episode.
   var request = new XMLHttpRequest();
 
@@ -62,11 +62,21 @@ function randomMifflin() {
     if (this.readyState === 4 && this.status == 200) {
       var response = JSON.parse(this.responseText);
       console.log(response.title);
+      document.getElementById('title').innerHTML = response.title;
       console.log(response.runtime + ' mins.');
+      document.getElementById('runtime').innerHTML = response.runtime + ' mins.';
       console.log(response.rating + '/10');
+      document.getElementById('rating').innerHTML = Math.round(response.rating) + '/10';
       console.log('Aired On: ' + response.first_aired);
+      document.getElementById('aired').innerHTML = 'Aired On: ' + response.first_aired;
       console.log('Season ' + response.season + ' ' + 'Episode ' + response.number);
+      document.getElementById('seasonInfo').innerHTML = 'Season ' + response.season + ' ' + 'Episode ' + response.number;
       console.log(response.overview);
+      document.getElementById('overview').innerHTML = response.overview;
+      var element = document.getElementById("info");
+      if (element.classList.contains('hidden') == true) {
+        element.classList.toggle('hidden');
+      }
     }
   };
   request.send();
@@ -84,7 +94,9 @@ function filterToggle() {
 //Shows comments button (needs a fix. after clicking again it becomes hidden.)
 function loadComments() {
   var element = document.getElementById("loadCom");
-  element.classList.toggle('hidden');
+  if (element.classList.contains('hidden') == true) {
+    element.classList.toggle('hidden');
+  }
 }
 
 //DISQUS (Needs fixing. Page Identifier needs to be dynamically generated.)

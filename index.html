@@ -11,81 +11,71 @@
     <link rel="stylesheet" href="css/reset.css">
     <link rel="stylesheet" href="css/main.css">
   </head>
+
   <body>
 
     <div class="header">
       <h1>Random Mifflin</h1>
       <p>A random episode generator for the best TV show ever, The Office.</p>
+      <p id="quote">“You may look around and see two groups here: white collar, blue collar. But I don't see it that way, and you know why not? Because I am collar-blind.”</p>
     </div>
 
+    <div class="filtersButton">
+      <button onclick="filterToggle()" type="button" name="" value="Filters"><i class="material-icons">check</i></button>
+      <button onclick="loadComments()" type="button" id="randomMifflin" name="button"><span id="buttonText">Randomize</span></button>
+    </div>
 
-      <div class="middle">
-          <blockquote cite="http://">
-              “You may look around and see two groups here: white collar, blue collar. But I don't see it that way, and you know why not? Because I am collar-blind.”
-          </blockquote>
-      </div>
-      <div class="filtersButton">
-        <input onclick="filterToggle()" type="button" name="" value="Filters">
-      </div>
+    <div class="infoCard hidden" id="info">
+      <h2 id="title"></h2>
+      <p id="seasonInfo"></p>
+      <p id="runtime"></p>
+      <p id="rating"></p>
+      <p class="bold">Summary:</p>
+      <p id="overview"></p>
+      <p id="aired"></p>
+    </div>
 
-      <div class="hidden" id="filters">
-        <form action="">
+    <div class="hidden" id="filters">
+      <form action="">
 
-          <input type="button" name="" value="All Seasons">
+        <input type="button" name="" value="All Seasons">
 
-          <input type="button" name="" value="Season 1">
+        <input type="button" name="" value="Season 1">
 
-          <input type="button" name="" value="Season 2">
+        <input type="button" name="" value="Season 2">
 
-          <input type="button" name="" value="Season 3">
+        <input type="button" name="" value="Season 3">
 
-          <input type="button" name="" value="Season 4">
+        <input type="button" name="" value="Season 4">
 
-          <input type="button" name="" value="Season 5">
+        <input type="button" name="" value="Season 5">
 
-          <input type="button" name="" value="Season 6">
+        <input type="button" name="" value="Season 6">
 
-          <input type="button" name="" value="Season 7">
+        <input type="button" name="" value="Season 7">
 
-          <input type="button" name="" value="Season 8">
+        <input type="button" name="" value="Season 8">
 
-          <input type="button" name="" value="Season 9">
+        <input type="button" name="" value="Season 9">
 
-        </form>
+      </form>
 
-        <form action="">
-          <p>Exclude:</p>
+      <form action="">
+        <p>Exclude:</p>
 
-          <input type="button" name="" value="Phyllis' Wedding">
+        <input type="button" name="" value="Phyllis' Wedding">
 
-          <input type="button" name="" value="Dinner Party">
+        <input type="button" name="" value="Dinner Party">
 
-          <input type="button" name="" value="Scott's Tots">
+        <input type="button" name="" value="Scott's Tots">
 
-          <input type="button" name="" value="The Banker">
-        </form>
-      </div>
+        <input type="button" name="" value="The Banker">
+      </form>
+    </div>
 
-      <div class="jsRandom">
-        <button onclick="loadComments()" type="button" id="randomMifflin" name="button">
-          <i class="material-icons">
-          shuffle
-          </i>
-          Randomize</button>
-        <p id="episodeInfo"></p>
-      </div>
-
-      <div class="infoCard">
-        <h2 id="title"></h2>
-        <p id="seasonInfo"></p>
-        <p id="overview"></p>
-        <p id="runtime"></p>
-      </div>
-
-      <div id="loadCom" class="jsRandom hidden filtersButton">
-        <input onclick="loadDisqus()" type="button" name="" value="Load Comments">
-        <div id="disqus_thread"></div>
-      </div>
+    <div id="loadCom" class="hidden filtersButton">
+      <button onclick="loadDisqus()" type="button" name="" value="Load Comments">Load Comments</button>
+      <div id="disqus_thread"></div>
     </div>
 
     <footer>
@@ -94,5 +84,7 @@
     </footer>
     <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script> -->
     <script src="js/main.js"></script>
+
   </body>
+
 </html>
