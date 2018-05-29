@@ -26,7 +26,9 @@ a {
   text-decoration: none;
   color: #5B00FF;
 }
-
+.bold {
+  font-weight: bold;
+}
 .header {
   text-align: center;
   margin: 1rem 0;

@@ -19,6 +19,7 @@ To-do:
 // Listens to the Random Mifflin button.
 document.getElementById("randomMifflin").addEventListener("click", randomMifflin);
 var seasonNo;
+var pageURL;
 //Runs the random episode selector.
 function randomMifflin() {
 
@@ -44,10 +45,26 @@ function randomMifflin() {
   }
 
   //Change Page Title // DONE
-  var pageTitle = 'Random Mifflin | ' + 'Season ' + seasonNo + ' ' + 'Episode ' + episodeNo;
+  var pageTitle = 'Random Mifflin | ' + 'S' + seasonNo + 'E' + episodeNo;
   document.title = pageTitle;
   console.log(pageTitle);
   //Change Page Title // DONE
+
+  //change page URL
+  history.pushState(null, '', '?S' + seasonNo + 'E' + episodeNo);
+  pageURL = '?S' + seasonNo + 'E' + episodeNo;
+  //TMDB API generates episode thumbnail
+  var thumbRequest = new XMLHttpRequest();
+
+  thumbRequest.open('GET', 'https://api.themoviedb.org/3/tv/2316/season/' + seasonNo + '/episode/' + episodeNo + '/images?api_key=c4e0e43db456cb63f04bead90cf06afc');
+
+  thumbRequest.onload = function () {
+    var thumbData = JSON.parse(thumbRequest.responseText);
+    console.log('https://image.tmdb.org/t/p/original/' + thumbData.stills['0'].file_path);
+    var imgURL = 'https://image.tmdb.org/t/p/original/' + thumbData.stills['0'].file_path;
+    document.getElementById('thumbnail').src = imgURL;
+  };
+  thumbRequest.send();
 
   // Trakt API - Gets the information of the random episode.
   var request = new XMLHttpRequest();
@@ -74,6 +91,7 @@ function randomMifflin() {
       console.log(response.overview);
       document.getElementById('overview').innerHTML = response.overview;
       var element = document.getElementById("info");
+
       if (element.classList.contains('hidden') == true) {
         element.classList.toggle('hidden');
       }
@@ -102,7 +120,7 @@ function loadComments() {
 //DISQUS (Needs fixing. Page Identifier needs to be dynamically generated.)
 function loadDisqus() {
   var disqus_config = function () {
-    this.page.identifier = '/december-2010/the-best-day-of-my-life/'; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+    this.page.identifier = pageURL; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
     console.log(this.page.identifier);
   };
 
@@ -112,7 +130,6 @@ function loadDisqus() {
   s.setAttribute('data-timestamp', +new Date());
   (d.head || d.body).appendChild(s);
   })();
-  console.log(this.page.identifier);
 }
 //DISQUS
 
