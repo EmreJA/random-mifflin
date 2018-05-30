@@ -23,6 +23,8 @@ var pageURL;
 //Runs the random episode selector.
 function randomMifflin() {
 
+// add loader
+
   seasonNo = Math.ceil(Math.random() * 9);
   if (seasonNo == 1) {
       episodeNo = Math.ceil(Math.random() * 6);
@@ -95,6 +97,7 @@ function randomMifflin() {
 
       if (element.classList.contains('hidden') == true) {
         element.classList.toggle('hidden');
+        // remove loader
       }
     }
   };

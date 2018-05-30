@@ -6,7 +6,7 @@
     <meta name="description" content="A random episode generator for the best tv show ever, The Office">
     <meta name="author" content="Emre C. Aydin">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link href="https://fonts.googleapis.com/css?family=Lora:700|Open+Sans" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Lora:700|Raleway" rel="stylesheet">
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <link rel="stylesheet" href="css/reset.css">
     <link rel="stylesheet" href="css/main.css">
@@ -20,8 +20,46 @@
     </div>
 
     <div class="filtersButton">
-      <button onclick="filterToggle()" type="button" name="" value="Filters"><i class="material-icons">check</i></button>
-      <button onclick="loadComments()" type="button" id="randomMifflin" name="button"><span id="buttonText">Randomize</span></button>
+         <button onclick="filterToggle()" type="button" name="" id="fltr"value="Filters">FILTERS</button>
+         <button onclick="loadComments()" type="button" id="randomMifflin" name="button"><span class="bold"id="buttonText">RANDOMIZE</span></button>
+    </div>
+
+    <div class="hidden" id="filters">
+      <form action="">
+
+        <input type="button" name="" value="All Seasons">
+
+        <input type="button" name="" value="1">
+
+        <input type="button" name="" value="2">
+
+        <input type="button" name="" value="3">
+
+        <input type="button" name="" value="4">
+
+        <input type="button" name="" value="5">
+
+        <input type="button" name="" value="6">
+
+        <input type="button" name="" value="7">
+
+        <input type="button" name="" value="8">
+
+        <input type="button" name="" value="9">
+
+      </form>
+
+      <form action="">
+        <p>Exclude:</p>
+
+        <input type="button" name="" value="Phyllis' Wedding">
+
+        <input type="button" name="" value="Dinner Party">
+
+        <input type="button" name="" value="Scott's Tots">
+
+        <input type="button" name="" value="The Banker">
+      </form>
     </div>
 
     <div class="infoCard hidden" id="info">
@@ -48,43 +86,6 @@
 
     </div>
 
-    <div class="hidden" id="filters">
-      <form action="">
-
-        <input type="button" name="" value="All Seasons">
-
-        <input type="button" name="" value="Season 1">
-
-        <input type="button" name="" value="Season 2">
-
-        <input type="button" name="" value="Season 3">
-
-        <input type="button" name="" value="Season 4">
-
-        <input type="button" name="" value="Season 5">
-
-        <input type="button" name="" value="Season 6">
-
-        <input type="button" name="" value="Season 7">
-
-        <input type="button" name="" value="Season 8">
-
-        <input type="button" name="" value="Season 9">
-
-      </form>
-
-      <form action="">
-        <p>Exclude:</p>
-
-        <input type="button" name="" value="Phyllis' Wedding">
-
-        <input type="button" name="" value="Dinner Party">
-
-        <input type="button" name="" value="Scott's Tots">
-
-        <input type="button" name="" value="The Banker">
-      </form>
-    </div>
 
     <div id="loadCom" class="hidden filtersButton">
       <button onclick="loadDisqus()" type="button" name="" value="Load Comments">Load Comments</button>

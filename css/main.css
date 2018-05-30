@@ -1,6 +1,6 @@
 body {
   color: #262626;
-  font-family: 'Open Sans', sans-serif;
+  font-family: 'Raleway', sans-serif;
   font-size: 1rem;
 }
 
@@ -43,7 +43,7 @@ a {
 }
 
 input{
-  font-family: 'Open Sans', sans-serif;
+  font-family: 'Raleway', sans-serif;
   font-size: 1rem;
   height: 2rem;
 }
@@ -85,7 +85,7 @@ blockquote {
 
 #disqus_thread{
   margin:auto;
-  width: 40%;
+  width: 400px;
 }
 .material-icons {
   font-size: 1rem;
@@ -94,12 +94,26 @@ blockquote {
 #buttonText {
   font-size: 1.5rem;
 }
+#fltr {
+    font-size: 1.5rem;
+    font-family: 'Raleway', sans-serif;
+    width: 7rem;
+    text-align: center;
+    background-color: #ffffff;
+    color: #5B00FF;
+    text-decoration: underline;
+    text-decoration-color: #FED330;
+    border:none;
+}
+
 #randomMifflin {
-  font-family: 'Open Sans', sans-serif;
-  width: 9rem;
-  background-color: #ffffff;
-  color: #000000;
+  font-family: 'Raleway', sans-serif;
+  width: 10rem;
+  text-align: center;
+  background-color: #02EBCD;
+  color: #ffffff;
   border:none;
+  border-radius:0.5rem;
   text-decoration: none;
 }
 #thumbnail {
@@ -116,4 +130,14 @@ blockquote {
 }
 .information {
   text-align: justify;
+}
+
+#loadCom {
+    margin-top: 1rem;
+}
+#title{
+    line-height: 1;
+    display: inline-block;
+    text-decoration: none;
+    border-bottom: 0.5rem solid #FED330;
 }
