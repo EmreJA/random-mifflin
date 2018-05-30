@@ -6,10 +6,10 @@ body {
 
 h1 {
   font-family: 'Lora', serif;
-  font-size: 2.5rem;
   color: #5B00FF;
-  /*font-size: 3.75rem;*/
+  font-size: 3.75rem;
   font-weight: 700;
+  line-height: 1;
 }
 
 h2 {
@@ -34,18 +34,17 @@ a {
   margin: 1rem 0;
 }
 
-form {
+#filters {
   background-color: orange;
+  width: 400px;
+  margin: auto;
   text-align: center;
+  margin-top: 1rem;
 }
 
 input{
   font-family: 'Open Sans', sans-serif;
   font-size: 1rem;
-  color: #5B00FF;
-  border-radius: 1rem;
-  background-color: white;
-  border: 0.1rem solid #5B00FF;
   height: 2rem;
 }
 
@@ -53,9 +52,6 @@ footer {
   margin: auto;
   font-size: 1rem;
   opacity: 0.60;
-  position: fixed;
-  left: 0;
-  bottom: 0;
   text-align: center;
   width: 100%;
   line-height: 1;
@@ -83,27 +79,38 @@ blockquote {
 
 .infoCard {
   margin: auto;
-  width: 60%;
-  background-color: #FFD400;
+  width: 400px;
+  background-color: white;
 }
 
 #disqus_thread{
   margin:auto;
   width: 40%;
 }
-
-button{
-  height: 3rem;
-}
-
 .material-icons {
   font-size: 1rem;
-  vertical-align: middle;
+  line-height: 1;
 }
 #buttonText {
   font-size: 1.5rem;
 }
 #randomMifflin {
   font-family: 'Open Sans', sans-serif;
-  width: 15rem;
+  width: 9rem;
+  background-color: #ffffff;
+  color: #000000;
+  border:none;
+  text-decoration: none;
+}
+#thumbnail {
+  outline: 0.5rem solid #02EBCD;
+  margin-top: 1rem;
+}
+.meta {
+display: inline-block;
+}
+
+.pic {
+  margin-top: 1rem;
+  margin-bottom: 1rem;
 }
