@@ -107,10 +107,13 @@ blockquote {
   margin-top: 1rem;
 }
 .meta {
-display: inline-block;
+  margin-bottom: 1rem;
 }
 
 .pic {
   margin-top: 1rem;
   margin-bottom: 1rem;
+}
+.information {
+  text-align: justify;
 }

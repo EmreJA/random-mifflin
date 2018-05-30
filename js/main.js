@@ -83,11 +83,12 @@ function randomMifflin() {
       console.log(response.runtime + ' mins.');
       document.getElementById('runtime').innerHTML = response.runtime + ' mins.';
       console.log(response.rating + '/10');
-      document.getElementById('rating').innerHTML = Math.round(response.rating) + '/10';
+      document.getElementById('rating').innerHTML = (response.rating).toFixed(1) + '/10';
       //console.log('Aired On: ' + response.first_aired);
       //document.getElementById('aired').innerHTML = 'Aired On: ' + response.first_aired;
       console.log('Season ' + response.season + ' ' + 'Episode ' + response.number);
-      document.getElementById('seasonInfo').innerHTML = 'S' + response.season + 'E' + response.number;
+      document.getElementById('seasonInfo').innerHTML = response.season;
+      document.getElementById('episodeInfo').innerHTML = response.number;
       console.log(response.overview);
       document.getElementById('overview').innerHTML = response.overview;
       var element = document.getElementById("info");
