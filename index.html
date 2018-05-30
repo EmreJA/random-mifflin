@@ -6,8 +6,9 @@
     <meta name="description" content="A random episode generator for the best tv show ever, The Office">
     <meta name="author" content="Emre C. Aydin">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link href="https://fonts.googleapis.com/css?family=Lora:700|Raleway" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Lora:700|Raleway:400,600,700,900" rel="stylesheet">
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-oi8o31xSQq8S0RpBcb4FaLB8LJi9AT8oIdmS1QldR8Ui7KUQjNAnDlJjp55Ba8FG" crossorigin="anonymous">
     <link rel="stylesheet" href="css/reset.css">
     <link rel="stylesheet" href="css/main.css">
   </head>
@@ -20,45 +21,44 @@
     </div>
 
     <div class="filtersButton">
-         <button onclick="filterToggle()" type="button" name="" id="fltr"value="Filters">FILTERS</button>
+         <!-- <button onclick="filterToggle()" type="button" name="" id="fltr" value="Filters">FILTERS</button> -->
          <button onclick="loadComments()" type="button" id="randomMifflin" name="button"><span class="bold"id="buttonText">RANDOMIZE</span></button>
     </div>
 
     <div class="hidden" id="filters">
       <form action="">
 
-        <input type="button" name="" value="All Seasons">
+        <input class="btn-border" type="button" name="" value="Clear">
 
-        <input type="button" name="" value="1">
+        <input class="btn-border" type="button" name="" value="1">
 
-        <input type="button" name="" value="2">
+        <input class="btn-border" type="button" name="" value="2">
 
-        <input type="button" name="" value="3">
+        <input class="btn-border" type="button" name="" value="3">
 
-        <input type="button" name="" value="4">
+        <input class="btn-border" type="button" name="" value="4">
 
-        <input type="button" name="" value="5">
+        <input class="btn-border" type="button" name="" value="5">
 
-        <input type="button" name="" value="6">
+        <input class="btn-border" type="button" name="" value="6">
 
-        <input type="button" name="" value="7">
+        <input class="btn-border" type="button" name="" value="7">
 
-        <input type="button" name="" value="8">
+        <input class="btn-border" type="button" name="" value="8">
 
-        <input type="button" name="" value="9">
+        <input class="btn-border" type="button" name="" value="9">
 
       </form>
 
-      <form action="">
-        <p>Exclude:</p>
+      <form class="episodeExc"action="">
 
-        <input type="button" name="" value="Phyllis' Wedding">
+        <input class="btn-border" type="button" name="" value="Phyllis' Wedding">
 
-        <input type="button" name="" value="Dinner Party">
+        <input class="btn-border" type="button" name="" value="Dinner Party">
 
-        <input type="button" name="" value="Scott's Tots">
+        <input class="btn-border" type="button" name="" value="Scott's Tots">
 
-        <input type="button" name="" value="The Banker">
+        <input class="btn-border" type="button" name="" value="The Banker">
       </form>
     </div>
 
@@ -82,6 +82,13 @@
         <!--<p class="bold">Summary</p>-->
         <p id="overview"></p>
         <!--<p id="aired"></p>-->
+      </div>
+
+      <div class="links">
+        <p id="netflix">NETFLIX</p>
+        <p id="googlePlay">Google Play</p>
+        <p id="itunes">iTunes</p>
+        <p id="imdb">IMDb</p>
       </div>
 
     </div>
