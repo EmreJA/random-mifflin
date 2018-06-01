@@ -1,6 +1,7 @@
 /*
 To-do:
 - Exclude episodes
+- affiliate URL systems https://www.geni.us/
 - URL based generation with ? and disqus comments based on url.
 - Select season: if a season is selected, generate numbers only for that season. Also, disable options for episodes according to the selected season.
 - Info Card: Episode's information from Trakt API.
