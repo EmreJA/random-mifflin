@@ -1,4 +1,5 @@
 body {
+  background-color: #fafafa;
   color: #262626;
   font-family: 'Raleway', sans-serif;
   font-size: 1rem;
@@ -80,7 +81,6 @@ blockquote {
 .infoCard {
   margin: auto;
   width: 400px;
-  background-color: white;
 }
 
 #disqus_thread{
@@ -92,25 +92,24 @@ blockquote {
   line-height: 1;
 }
 #buttonText {
-  font-size: 1.5rem;
+  font-size: 2rem;
+  font-weight: 600;
 }
 #fltr {
   font-size: 1rem;
   font-family: 'Raleway', sans-serif;
-  width: 4.5rem;
+  width: 3rem;
   text-align: center;
-  background-color: #ffffff;
   color: #5B00FF;
-  font-weight: bold;
-  border: none;
-  border-bottom:0.3rem solid #FED330;
-  outline: none;
   margin-right: 1rem;
+  border:none;
+  outline: none;
+  background-color: transparent;
 }
 
 #randomMifflin {
   font-family: 'Raleway', sans-serif;
-  width: 10rem;
+  width: 13rem;
   text-align: center;
   background-color: #02EBCD;
   color: #ffffff;
@@ -167,21 +166,17 @@ blockquote {
 .episodeExc input {
   font-size: 0.89rem;
 }
-.links p{
-  font-weight: 700;
-  display: inline;
+
+
+.links img {
+  height: 1.5rem;
+}
+
+.links i {
+  color: #495057;
+}
+
+.links i, img {
   margin-right: 1rem;
-  line-height: 1;
-}
-
-#netflix {
-  color: #E50913;
-}
-
-#googlePlay {
-  color: #0984e3;
-}
-
-#itunes {
-  color: #FF5C51;
+  vertical-align: middle;
 }
