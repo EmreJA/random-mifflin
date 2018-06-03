@@ -20,6 +20,7 @@ To-do:
 // Listens to the Random Mifflin button.
 document.getElementById("randomMifflin").addEventListener("click", randomMifflin);
 var seasonNo;
+var episodeNo;
 var pageURL;
 var checkURL = location.search;
 
@@ -55,23 +56,32 @@ function randomMifflin() {
   console.log(pageTitle);
   //Change Page Title // DONE
 
+  getThumb() //get thumbnail TMDB API
+  getInfo() //get episode info TRAKT API
+
   //change page URL
   history.pushState(null, '', '?S' + seasonNo + 'E' + episodeNo);
   pageURL = '?S' + seasonNo + 'E' + episodeNo;
-  //TMDB API generates episode thumbnail
+
+}
+
+//TMDB API generates episode thumbnail
+function getThumb(){
   var thumbRequest = new XMLHttpRequest();
 
   thumbRequest.open('GET', 'https://api.themoviedb.org/3/tv/2316/season/' + seasonNo + '/episode/' + episodeNo + '/images?api_key=c4e0e43db456cb63f04bead90cf06afc');
 
   thumbRequest.onload = function () {
     var thumbData = JSON.parse(thumbRequest.responseText);
-    console.log('https://image.tmdb.org/t/p/original/' + thumbData.stills['0'].file_path);
     var imgURL = 'https://image.tmdb.org/t/p/original/' + thumbData.stills['0'].file_path;
     document.getElementById('thumbnail').src = imgURL;
   };
   thumbRequest.send();
+}
+//TMDB API generates episode thumbnail
 
-  // Trakt API - Gets the information of the random episode.
+// Trakt API - Gets the information of the random episode.
+function getInfo(){
   var request = new XMLHttpRequest();
 
   request.open('GET', 'https://api.trakt.tv/shows/the-office/seasons/' + seasonNo + '/episodes/' + episodeNo + '?extended=full');
@@ -81,33 +91,27 @@ function randomMifflin() {
   request.setRequestHeader('trakt-api-key', 'c66faa4cdb7c9815a82e9e066821f317ebc6086a6217a1b0934169ea55fbd492');
 
   request.onreadystatechange = function () {
-    if (this.readyState === 4 && this.status == 200) {
-      var response = JSON.parse(this.responseText);
-      console.log(response.title);
-      document.getElementById('title').innerHTML = response.title;
-      console.log(response.runtime + ' mins.');
-      document.getElementById('runtime').innerHTML = response.runtime + ' mins.';
-      console.log(response.rating + '/10');
-      document.getElementById('rating').innerHTML = (response.rating).toFixed(1) + '/10';
-      //console.log('Aired On: ' + response.first_aired);
-      //document.getElementById('aired').innerHTML = 'Aired On: ' + response.first_aired;
-      console.log('Season ' + response.season + ' ' + 'Episode ' + response.number);
-      document.getElementById('seasonInfo').innerHTML = response.season;
-      document.getElementById('episodeInfo').innerHTML = response.number;
-      console.log(response.overview);
-      document.getElementById('overview').innerHTML = response.overview;
-      var element = document.getElementById("info");
+      if (this.readyState === 4 && this.status == 200) {
+        var response = JSON.parse(this.responseText);
+        console.log(response.title);
+        document.getElementById('title').innerHTML = response.title;
+        document.getElementById('runtime').innerHTML = response.runtime + ' mins.';
+        document.getElementById('rating').innerHTML = (response.rating).toFixed(1) + '/10';
+        //document.getElementById('aired').innerHTML = 'Aired On: ' + response.first_aired;
+        document.getElementById('seasonInfo').innerHTML = response.season;
+        document.getElementById('episodeInfo').innerHTML = response.number;
+        document.getElementById('overview').innerHTML = response.overview;
+        var element = document.getElementById("info");
 
-      if (element.classList.contains('hidden') == true) {
-        element.classList.toggle('hidden');
-        // remove loader
+        if (element.classList.contains('hidden') == true) {
+          element.classList.toggle('hidden');
+          // remove loader
+        }
       }
-    }
-  };
-  request.send();
+    };
+    request.send();
 }
-
-
+// Trakt API - Gets the information of the random episode.
 
 // Opens the filter menu. // DONE //
 function filterToggle() {
