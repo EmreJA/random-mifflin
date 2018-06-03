@@ -63,6 +63,10 @@ footer:hover {
   opacity: 1;
 }
 
+#possible {
+  margin-top: 0.5rem;
+}
+
 .filtersButton {
   text-align: center;
 }
@@ -74,8 +78,10 @@ blockquote {
   display: none;
 }
 .footerImage {
-  width: 80px;
+  height: 2rem;
+  margin-top: 0.5rem;
   vertical-align: middle;
+  margin-right: 0.6rem;
 }
 
 .infoCard {
@@ -135,7 +141,21 @@ blockquote {
 }
 
 #loadCom {
-  margin-top: 1rem;
+  margin-top: 0.5rem;
+}
+
+#loadComments {
+  background-color: #FED330;
+  font-family: 'Raleway', sans-serif;
+  color: white;
+  font-weight: 600;
+  height: 1.5rem;
+  text-align: center;
+  border:none;
+  border-radius:0.5rem;
+  text-decoration: none;
+  outline: none;
+  text-transform: uppercase;
 }
 
 #title{

@@ -21,6 +21,8 @@ To-do:
 document.getElementById("randomMifflin").addEventListener("click", randomMifflin);
 var seasonNo;
 var pageURL;
+var checkURL = location.search;
+
 //Runs the random episode selector.
 function randomMifflin() {
 
@@ -121,7 +123,8 @@ function loadComments() {
     element.classList.toggle('hidden');
   }
 }
-
+//checks url
+console.log(checkURL.substring(1));
 //DISQUS (Needs fixing. Page Identifier needs to be dynamically generated.)
 function loadDisqus() {
   var disqus_config = function () {
