@@ -15,14 +15,38 @@ To-do:
 - (Maybe) A quote from the episode: Can use The Office Quotes API.
 - (Maybe) Order of appearance amounts for charaters for that specific episode: Can use couple of APIs to generate. With character portraits.
 - (Maybe) 1 advertisement. Amazon Products related to The Office or Google Adsense.
+-share buttons
+-change page share meta according to the episode (title, description, thumb.)
 */
 
 // Listens to the Random Mifflin button.
 document.getElementById("randomMifflin").addEventListener("click", randomMifflin);
+document.getElementById("randomMifflin").addEventListener("click", loadComments);
+document.getElementById("fltr").addEventListener("click", filterToggle);
+document.getElementById("loadComments").addEventListener("click", showDisqus);
+
+
 var seasonNo;
 var episodeNo;
 var pageURL;
 var checkURL = location.search;
+
+//url checking https://css-tricks.com/snippets/javascript/get-url-variables/
+/*function getQueryVariable(variable)
+{
+       var query = window.location.search.substring(1);
+       var vars = query.split("&");
+       for (var i=0;i<vars.length;i++) {
+               var pair = vars[i].split("=");
+               if(pair[0] == variable){return pair[1];}
+       }
+       return(false);
+
+       getThumb() //get thumbnail TMDB API
+       getInfo() //get episode info TRAKT API
+       loadDisqus() //get disqus comments
+}*/
+//url checking https://css-tricks.com/snippets/javascript/get-url-variables/
 
 //Runs the random episode selector.
 function randomMifflin() {
@@ -31,7 +55,7 @@ function randomMifflin() {
 
   seasonNo = Math.ceil(Math.random() * 9);
   if (seasonNo == 1) {
-      episodeNo = Math.ceil(Math.random() * 6);
+    episodeNo = Math.ceil(Math.random() * 6);
   } else if (seasonNo == 2) {
     episodeNo = Math.ceil(Math.random() * 22);
   } else if (seasonNo == 3) {
@@ -50,18 +74,20 @@ function randomMifflin() {
     episodeNo = Math.ceil(Math.random() * 23);
   }
 
+  getThumb() //get thumbnail TMDB API
+  getInfo() //get episode info TRAKT API
+
   //Change Page Title // DONE
-  var pageTitle = 'Random Mifflin | ' + 'S' + seasonNo + 'E' + episodeNo;
+  var pageTitle = 'Random Mifflin | ' + 'Season ' + seasonNo + ' Episode ' + episodeNo;
   document.title = pageTitle;
   console.log(pageTitle);
   //Change Page Title // DONE
 
-  getThumb() //get thumbnail TMDB API
-  getInfo() //get episode info TRAKT API
-
   //change page URL
-  history.pushState(null, '', '?S' + seasonNo + 'E' + episodeNo);
-  pageURL = '?S' + seasonNo + 'E' + episodeNo;
+  history.pushState(null, '', '?' + 's=' + seasonNo + '&' + 'e=' + episodeNo);
+  pageURL = '?' + 's=' + seasonNo + '&' + 'e=' + episodeNo;
+
+  loadDisqus() //get disqus comments
 
 }
 
@@ -129,6 +155,7 @@ function loadComments() {
 }
 //checks url
 console.log(checkURL.substring(1));
+
 //DISQUS (Needs fixing. Page Identifier needs to be dynamically generated.)
 function loadDisqus() {
   var disqus_config = function () {
@@ -142,9 +169,18 @@ function loadDisqus() {
   s.setAttribute('data-timestamp', +new Date());
   (d.head || d.body).appendChild(s);
   })();
-}
+};
 //DISQUS
-
+function showDisqus(){
+  var element = document.getElementById("disqus_thread");
+  if (element.classList.contains('hidden') == true) {
+    element.classList.remove('hidden');
+    document.getElementById('loadComments').innerHTML = 'Hide Comments';
+  } else {
+    element.classList.add('hidden')
+    document.getElementById('loadComments').innerHTML = 'Show Comments';
+  }
+}
 /*
 Exclude option:
 Scott's Tots - Season 6 Episode 12

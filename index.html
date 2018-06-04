@@ -21,8 +21,8 @@
     </div>
 
     <div class="filtersButton">
-      <button onclick="filterToggle()" type="button" name="" id="fltr" value="Filters"><i class="fal fa-filter fa-2x"></i></button>
-      <button onclick="loadComments()" type="button" id="randomMifflin" name="button"><span class="bold"id="buttonText">RANDOMIZE</span></button>
+      <button type="button" name="" id="fltr" value="Filters"><i class="fal fa-filter fa-2x"></i></button>
+      <button type="button" id="randomMifflin" name="button"><span class="bold"id="buttonText">RANDOMIZE</span></button>
     </div>
 
     <div class="hidden" id="filters">
@@ -96,8 +96,8 @@
 
 
     <div id="loadCom" class="hidden filtersButton">
-      <button id="loadComments" onclick="loadDisqus()" type="button" name="" value="Load Comments">Load Comments</button>
-      <div id="disqus_thread"></div>
+      <button id="loadComments" type="button" value="Load Comments">Show Comments</button>
+      <div id="disqus_thread" class="hidden"></div>
     </div>
 
     <footer>
