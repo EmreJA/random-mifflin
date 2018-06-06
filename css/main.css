@@ -187,16 +187,12 @@ blockquote {
   font-size: 0.89rem;
 }
 
+.links {
+  background-color: grey;
 
+}
 .links img {
-  height: 1.5rem;
-}
-
-.links i {
-  color: #495057;
-}
-
-.links i, img {
+  height: 2rem;
   margin-right: 1rem;
   vertical-align: middle;
 }

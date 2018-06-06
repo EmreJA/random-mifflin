@@ -29,28 +29,33 @@ document.getElementById("loadComments").addEventListener("click", showDisqus);
 var seasonNo;
 var episodeNo;
 var pageURL;
-var checkURL = location.search;
 
-//url checking https://css-tricks.com/snippets/javascript/get-url-variables/
-/*function getQueryVariable(variable)
-{
-       var query = window.location.search.substring(1);
-       var vars = query.split("&");
-       for (var i=0;i<vars.length;i++) {
-               var pair = vars[i].split("=");
-               if(pair[0] == variable){return pair[1];}
-       }
-       return(false);
+seasonNo = getQueryVariable('s');
+episodeNo = getQueryVariable('e');
 
-       getThumb() //get thumbnail TMDB API
-       getInfo() //get episode info TRAKT API
-       loadDisqus() //get disqus comments
-}*/
-//url checking https://css-tricks.com/snippets/javascript/get-url-variables/
+if (seasonNo && episodeNo !== undefined) {
+  getThumb() //get thumbnail TMDB API
+  getInfo() //get episode info TRAKT API
+  loadDisqus() //get disqus comments
+  loadComments() //Show comments button
+}
+
+//gets the url and splits it
+function getQueryVariable(variable) {
+    var query = window.location.search.substring(1);
+    var vars = query.split('&');
+    for (var i = 0; i < vars.length; i++) {
+        var pair = vars[i].split('=');
+        if (decodeURIComponent(pair[0]) == variable) {
+            return decodeURIComponent(pair[1]);
+        }
+    }
+    console.log('Query variable %s not found', variable);
+}
+//gets the url and splits it
 
 //Runs the random episode selector.
 function randomMifflin() {
-
 // add loader
 
   seasonNo = Math.ceil(Math.random() * 9);
@@ -76,17 +81,8 @@ function randomMifflin() {
 
   getThumb() //get thumbnail TMDB API
   getInfo() //get episode info TRAKT API
-
-  //Change Page Title // DONE
-  var pageTitle = 'Random Mifflin | ' + 'Season ' + seasonNo + ' Episode ' + episodeNo;
-  document.title = pageTitle;
-  console.log(pageTitle);
-  //Change Page Title // DONE
-
-  //change page URL
-  history.pushState(null, '', '?' + 's=' + seasonNo + '&' + 'e=' + episodeNo);
-  pageURL = '?' + 's=' + seasonNo + '&' + 'e=' + episodeNo;
-
+  changeTitle() //Change Page Title
+  changeURL() // Change Page URL
   loadDisqus() //get disqus comments
 
 }
@@ -153,8 +149,6 @@ function loadComments() {
     element.classList.toggle('hidden');
   }
 }
-//checks url
-console.log(checkURL.substring(1));
 
 //DISQUS (Needs fixing. Page Identifier needs to be dynamically generated.)
 function loadDisqus() {
@@ -181,6 +175,21 @@ function showDisqus(){
     document.getElementById('loadComments').innerHTML = 'Show Comments';
   }
 }
+  //Change Page Title // DONE
+function changeTitle(){
+  var pageTitle = 'Random Mifflin | ' + 'Season ' + seasonNo + ' Episode ' + episodeNo;
+  document.title = pageTitle;
+  console.log(pageTitle);
+}
+//Change Page Title
+
+//change page URL
+function changeURL(){
+  history.pushState(null, '', '?' + 's=' + seasonNo + '&' + 'e=' + episodeNo);
+  pageURL = '?' + 's=' + seasonNo + '&' + 'e=' + episodeNo;
+}
+//change page URL
+
 /*
 Exclude option:
 Scott's Tots - Season 6 Episode 12
