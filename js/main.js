@@ -150,7 +150,7 @@ function loadComments() {
   }
 }
 
-//DISQUS (Needs fixing. Page Identifier needs to be dynamically generated.)
+//DISQUS
 function loadDisqus() {
   var disqus_config = function () {
     this.page.identifier = pageURL; // Replace PAGE_IDENTIFIER with your page's unique identifier variable

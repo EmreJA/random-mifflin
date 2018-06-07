@@ -16,7 +16,6 @@ h1 {
 h2 {
   font-family: 'Lora', serif;
   font-size: 2em;
-  font-weight: bold;
 }
 
 p {
@@ -97,10 +96,11 @@ blockquote {
   font-size: 1rem;
   line-height: 1;
 }
+
 #buttonText {
   font-size: 2rem;
-  font-weight: 600;
 }
+
 #fltr {
   font-size: 1rem;
   font-family: 'Raleway', sans-serif;
@@ -145,10 +145,9 @@ blockquote {
 }
 
 #loadComments {
-  background-color: #FED330;
+  background-color: #5B00FF;
   font-family: 'Raleway', sans-serif;
   color: white;
-  font-weight: 600;
   height: 1.5rem;
   text-align: center;
   border:none;
@@ -188,8 +187,8 @@ blockquote {
 }
 
 .links {
-  background-color: grey;
-
+  background-color: white;
+  border-radius: 50%;
 }
 .links img {
   height: 2rem;
