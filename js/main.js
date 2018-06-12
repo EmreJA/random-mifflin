@@ -4,22 +4,18 @@ To-do:
 - affiliate URL systems https://www.geni.us/
 - URL based generation with ? and disqus comments based on url.
 - Select season: if a season is selected, generate numbers only for that season. Also, disable options for episodes according to the selected season.
-- Info Card: Episode's information from Trakt API.
-- format dates
-- for images https://developers.themoviedb.org/3/getting-started/images see this website
 - Info links for the episodes: Trakt.TV - IMDB - TVDB
 - Streaming Links for the episodes: Netflix - Itunes - Amazon - Google Play Movies
 - Google Analytics
 - (Maybe) Links for purchasing BoxSet etc.
 - (Maybe) Load comments for the episode: Disqus comments can be generated. User can "Load Comments"
-- (Maybe) A quote from the episode: Can use The Office Quotes API.
 - (Maybe) Order of appearance amounts for charaters for that specific episode: Can use couple of APIs to generate. With character portraits.
 - (Maybe) 1 advertisement. Amazon Products related to The Office or Google Adsense.
 -share buttons
 -change page share meta according to the episode (title, description, thumb.)
+-redbubble affiliate?
 */
 
-// Listens to the Random Mifflin button.
 document.getElementById("randomMifflin").addEventListener("click", randomMifflin);
 document.getElementById("randomMifflin").addEventListener("click", loadComments);
 document.getElementById("fltr").addEventListener("click", filterToggle);
