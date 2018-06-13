@@ -17,7 +17,7 @@ To-do:
 */
 
 document.getElementById("randomMifflin").addEventListener("click", randomMifflin);
-document.getElementById("randomMifflin").addEventListener("click", loadComments);
+document.getElementById("randomMifflin").addEventListener("click", showComm);
 document.getElementById("fltr").addEventListener("click", filterToggle);
 document.getElementById("loadComments").addEventListener("click", showDisqus);
 
@@ -33,7 +33,7 @@ if (seasonNo && episodeNo !== undefined) {
   getThumb() //get thumbnail TMDB API
   getInfo() //get episode info TRAKT API
   loadDisqus() //get disqus comments
-  loadComments() //Show comments button
+  showComm() //Show comments button
 }
 
 //gets the url and splits it
@@ -75,10 +75,10 @@ function randomMifflin() {
     episodeNo = Math.ceil(Math.random() * 23);
   }
 
-  getThumb() //get thumbnail TMDB API
-  getInfo() //get episode info TRAKT API
   changeTitle() //Change Page Title
   changeURL() // Change Page URL
+  getThumb() //get thumbnail TMDB API
+  getInfo() //get episode info TRAKT API
   loadDisqus() //get disqus comments
 
 }
@@ -111,7 +111,6 @@ function getInfo(){
   request.onreadystatechange = function () {
       if (this.readyState === 4 && this.status == 200) {
         var response = JSON.parse(this.responseText);
-        console.log(response.title);
         document.getElementById('title').innerHTML = response.title;
         document.getElementById('runtime').innerHTML = response.runtime + ' mins.';
         document.getElementById('rating').innerHTML = (response.rating).toFixed(1) + '/10';
@@ -139,7 +138,7 @@ function filterToggle() {
 // Opens the filter menu. // DONE //
 
 //Shows comments button (needs a fix. after clicking again it becomes hidden.)
-function loadComments() {
+function showComm() {
   var element = document.getElementById("loadCom");
   if (element.classList.contains('hidden') == true) {
     element.classList.toggle('hidden');
@@ -161,6 +160,8 @@ function loadDisqus() {
   })();
 };
 //DISQUS
+
+
 function showDisqus(){
   var element = document.getElementById("disqus_thread");
   if (element.classList.contains('hidden') == true) {
