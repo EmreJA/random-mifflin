@@ -17,9 +17,9 @@ To-do:
 */
 
 document.getElementById("randomMifflin").addEventListener("click", randomMifflin);
-document.getElementById("randomMifflin").addEventListener("click", showComm);
-document.getElementById("fltr").addEventListener("click", filterToggle);
-document.getElementById("loadComments").addEventListener("click", showDisqus);
+// document.getElementById("randomMifflin").addEventListener("click", showComm);
+// document.getElementById("fltr").addEventListener("click", filterToggle);
+// document.getElementById("loadComments").addEventListener("click", showDisqus);
 
 
 var seasonNo;
@@ -138,12 +138,12 @@ function filterToggle() {
 // Opens the filter menu. // DONE //
 
 //Shows comments button (needs a fix. after clicking again it becomes hidden.)
-function showComm() {
-  var element = document.getElementById("loadCom");
-  if (element.classList.contains('hidden') == true) {
-    element.classList.toggle('hidden');
-  }
-}
+// function showComm() {
+//   var element = document.getElementById("loadCom");
+//   if (element.classList.contains('hidden') == true) {
+//     element.classList.toggle('hidden');
+//   }
+// }
 
 //DISQUS
 function loadDisqus() {
@@ -162,16 +162,16 @@ function loadDisqus() {
 //DISQUS
 
 
-function showDisqus(){
-  var element = document.getElementById("disqus_thread");
-  if (element.classList.contains('hidden') == true) {
-    element.classList.remove('hidden');
-    document.getElementById('loadComments').innerHTML = 'Hide Comments';
-  } else {
-    element.classList.add('hidden')
-    document.getElementById('loadComments').innerHTML = 'Show Comments';
-  }
-}
+// function showDisqus(){
+//   var element = document.getElementById("disqus_thread");
+//   if (element.classList.contains('hidden') == true) {
+//     element.classList.remove('hidden');
+//     document.getElementById('loadComments').innerHTML = 'Hide Comments';
+//   } else {
+//     element.classList.add('hidden')
+//     document.getElementById('loadComments').innerHTML = 'Show Comments';
+//   }
+// }
   //Change Page Title // DONE
 function changeTitle(){
   var pageTitle = 'Random Mifflin | ' + 'Season ' + seasonNo + ' Episode ' + episodeNo;
