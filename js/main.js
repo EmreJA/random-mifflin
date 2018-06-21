@@ -18,7 +18,7 @@ To-do:
 
 document.getElementById("randomMifflin").addEventListener("click", randomMifflin);
 // document.getElementById("randomMifflin").addEventListener("click", showComm);
-// document.getElementById("fltr").addEventListener("click", filterToggle);
+document.getElementById("fltr").addEventListener("click", filterToggle);
 // document.getElementById("loadComments").addEventListener("click", showDisqus);
 
 
@@ -61,12 +61,19 @@ function randomMifflin() {
     episodeNo = Math.ceil(Math.random() * 22);
   } else if (seasonNo == 3) {
     episodeNo = Math.ceil(Math.random() * 23);
+    //Phyllis' Wedding - Season 3 Episode 15
+    // if ( && episodeNo == 15) {
+    //
+    // }
   } else if (seasonNo == 4) {
     episodeNo = Math.ceil(Math.random() * 14);
+    //Dinner Party - Season 4 Episode 13
   } else if (seasonNo == 5) {
     episodeNo = Math.ceil(Math.random() * 26);
   } else if (seasonNo == 6) {
     episodeNo = Math.ceil(Math.random() * 26);
+    //Scott's Tots - Season 6 Episode 12
+    //The Banker - Season 6 Episode 14 (Filler Episode)
   } else if (seasonNo == 7) {
     episodeNo = Math.ceil(Math.random() * 24);
   } else if (seasonNo == 8) {
@@ -186,11 +193,3 @@ function changeURL(){
   pageURL = '?' + 's=' + seasonNo + '&' + 'e=' + episodeNo;
 }
 //change page URL
-
-/*
-Exclude option:
-Scott's Tots - Season 6 Episode 12
-Phyllis' Wedding - Season 3 Episode 15
-Dinner Party - Season 4 Episode 13
-The Banker - Season 6 Episode 14 (Filler Episode)
-*/
