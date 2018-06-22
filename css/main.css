@@ -35,11 +35,9 @@ a {
 }
 
 #filters {
-
-  width: 400px;
+  width: 450px;
   margin: auto;
-  text-align: center;
-  margin-top: 1rem;
+  margin-top: 0.5rem;
 }
 
 input{
@@ -166,8 +164,20 @@ blockquote {
 .btn-border {
   border: none;
   border-bottom: 0.4rem solid #FED330;
-  background-color: white;
   outline: none;
+  margin-right: 0.5rem;
+}
+.episodeExc{
+  text-align: center;
+}
+.episodeExc input{
+  display: none;
+  font-size: 0.89rem;
+}
+
+label {
+  margin-bottom: 10rem;
+  line-height: 2;
 }
 
 .links {
@@ -176,14 +186,6 @@ blockquote {
   margin: auto;
   margin-top: 1rem;
   text-align: center;
-}
-
-.episodeExc{
-  margin-top: 0.5rem;
-}
-
-.episodeExc input {
-  font-size: 0.89rem;
 }
 
 .links img {
