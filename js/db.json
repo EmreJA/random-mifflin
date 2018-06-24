@@ -1,18 +1,39 @@
 {
-  "1":
-}
+  "season":[
+    [
+        "https://www.amazon.com/The-Office-Season-1/dp/B000U7O8LA","https://itunes.apple.com/ca/tv-season/the-office-season-1/id102772946"
+        ],
 
-season
-  episode
-    title
-    runtime
-    score
-    description
-    date
-    netflix
-    itunes
-    gplay
-    tmdb
-    imdb
-    trakt
-    
+    [
+        "https://www.amazon.com/The-Office-Season-2/dp/B002EQSQEK","https://itunes.apple.com/ca/tv-season/the-office-season-2/id102802072"
+        ],
+
+    [
+        "https://www.amazon.com/The-Office-Season-3/dp/B000U5OF1U","https://itunes.apple.com/ca/tv-season/the-office-season-3/id192599752"
+        ],
+
+    [
+        "https://www.amazon.com/The-Office-Season-4/dp/B002EQNCT4","https://itunes.apple.com/ca/tv-season/the-office-season-4/id264812288"
+      ],
+
+    [
+        "https://www.amazon.com/The-Office-Season-5/dp/B001EUKHRG","https://itunes.apple.com/ca/tv-season/the-office-season-5/id291547178"
+      ],
+
+    [
+        "https://www.amazon.com/The-Office-Season-6/dp/B002N764LM","https://itunes.apple.com/ca/tv-season/the-office-season-6/id329379351"
+      ],
+
+    [
+        "https://www.amazon.com/The-Office-Season-7/dp/B004128L8Q","https://itunes.apple.com/ca/tv-season/the-office-season-7/id386877624"
+      ],
+
+    [
+        "https://www.amazon.com/The-Office-Season-8/dp/B005JR4EH4","https://itunes.apple.com/ca/tv-season/the-office-season-8/id457795596"
+      ],
+
+    [
+        "https://www.amazon.com/The-Office-Season-9/dp/B0095R3JV6","https://itunes.apple.com/ca/tv-season/the-office-season-9/id555741267"
+      ]
+    ]
+}

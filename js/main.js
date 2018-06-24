@@ -25,11 +25,12 @@ document.getElementById("fltr").addEventListener("click", filterToggle);
 var seasonNo;
 var episodeNo;
 var pageURL;
-
+var urlData;
 seasonNo = getQueryVariable('s');
 episodeNo = getQueryVariable('e');
 
 if (seasonNo && episodeNo !== undefined) {
+  getURL() //get and change product urls
   getThumb() //get thumbnail TMDB API
   getInfo() //get episode info TRAKT API
   loadDisqus() //get disqus comments
@@ -93,6 +94,7 @@ function randomMifflin() {
     episodeNo = Math.ceil(Math.random() * 23);
   }
 
+  getURL() //get and change product urls
   changeTitle() //Change Page Title
   changeURL() // Change Page URL
   getThumb() //get thumbnail TMDB API
@@ -101,12 +103,23 @@ function randomMifflin() {
 
 }
 
+//gets amazon and itunes urls from db.json
+function getURL(){
+  var dataRequest = new XMLHttpRequest();
+  dataRequest.open('GET','js/db.json');
+  dataRequest.onload = function (){
+    urlData = JSON.parse(dataRequest.response);
+    document.getElementById('aHREF').href = urlData.season[seasonNo - 1]["0"];
+    document.getElementById('iHREF').href = urlData.season[seasonNo - 1][1];
+  }
+  dataRequest.send();
+}
+//gets amazon and itunes urls from db.json
+
 //TMDB API generates episode thumbnail
 function getThumb(){
   var thumbRequest = new XMLHttpRequest();
-
   thumbRequest.open('GET', 'https://api.themoviedb.org/3/tv/2316/season/' + seasonNo + '/episode/' + episodeNo + '/images?api_key=c4e0e43db456cb63f04bead90cf06afc');
-
   thumbRequest.onload = function () {
     var thumbData = JSON.parse(thumbRequest.responseText);
     var imgURL = 'https://image.tmdb.org/t/p/original/' + thumbData.stills['0'].file_path;
@@ -132,7 +145,6 @@ function getInfo(){
         document.getElementById('title').innerHTML = response.title;
         document.getElementById('runtime').innerHTML = response.runtime + ' mins.';
         document.getElementById('rating').innerHTML = (response.rating).toFixed(1) + '/10';
-        //document.getElementById('aired').innerHTML = 'Aired On: ' + response.first_aired;
         document.getElementById('seasonInfo').innerHTML = response.season;
         document.getElementById('episodeInfo').innerHTML = response.number;
         document.getElementById('overview').innerHTML = response.overview;
