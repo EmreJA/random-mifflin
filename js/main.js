@@ -33,7 +33,6 @@ if (seasonNo && episodeNo !== undefined) {
   getThumb() //get thumbnail TMDB API
   getInfo() //get episode info TRAKT API
   loadDisqus() //get disqus comments
-  showComm() //Show comments button
 }
 
 //gets the url and splits it
@@ -62,17 +61,29 @@ function randomMifflin() {
   } else if (seasonNo == 3) {
     episodeNo = Math.ceil(Math.random() * 23);
     //Phyllis' Wedding - Season 3 Episode 15
-    // if ( && episodeNo == 15) {
-    //
-    // }
+    if (document.getElementById('phyllis').checked == true && episodeNo == 15) {
+       randomMifflin();
+       console.log("Phyllis' Wedding excluded. Rerunning the script.");
+    }
   } else if (seasonNo == 4) {
     episodeNo = Math.ceil(Math.random() * 14);
     //Dinner Party - Season 4 Episode 13
+    if (document.getElementById('jan').checked == true && episodeNo == 13) {
+       randomMifflin();
+       console.log("Dinner Party excluded. Rerunning the script.");
+    };
   } else if (seasonNo == 5) {
     episodeNo = Math.ceil(Math.random() * 26);
   } else if (seasonNo == 6) {
     episodeNo = Math.ceil(Math.random() * 26);
     //Scott's Tots - Season 6 Episode 12
+    if (document.getElementById('scott').checked == true && episodeNo == 12) {
+       randomMifflin();
+       console.log("Scott's Tots excluded. Rerunning the script.");
+    } else if (document.getElementById('scott').checked == true && episodeNo == 14) {
+      randomMifflin();
+      console.log("The Banker excluded. Rerunning the script.");
+    }
     //The Banker - Season 6 Episode 14 (Filler Episode)
   } else if (seasonNo == 7) {
     episodeNo = Math.ceil(Math.random() * 24);
@@ -125,6 +136,7 @@ function getInfo(){
         document.getElementById('seasonInfo').innerHTML = response.season;
         document.getElementById('episodeInfo').innerHTML = response.number;
         document.getElementById('overview').innerHTML = response.overview;
+        document.getElementById('imdbHREF').href = "https://www.imdb.com/title/" + response.ids.imdb;
         var element = document.getElementById("info");
 
         if (element.classList.contains('hidden') == true) {

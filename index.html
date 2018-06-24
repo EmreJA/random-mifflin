@@ -21,7 +21,7 @@
     </div>
 
     <div class="filtersButton">
-      <button type="button" name="" id="fltr" value="Filters"><i class="fal fa-filter fa-2x"></i></button>
+      <img id="fltr" src="img/filter.svg" alt="Filter Icon">
       <button type="button" id="randomMifflin" name="button"><span class="bold"id="buttonText">RANDOMIZE</span></button>
     </div>
 
@@ -51,23 +51,23 @@
       </form> -->
       <p class="bold">Exclude Episodes</p>
       <form class="episodeExc" action="">
-        <label class="btn-border">
-          <input type="checkbox">
-          Scott's Tots
+        <label class="test">
+          <input id="scott" type="checkbox">
+          <span class="checkmark">Scott's Tots</span>
         </label>
-        <label class="btn-border">
-          <input type="checkbox">
-          Phyllis' Wedding
+        <label>
+          <input id="phyllis" type="checkbox">
+          <span class="checkmark">Phyllis' Wedding</span>
+        </label>
+        <br>
+        <label>
+          <input id="jan" type="checkbox">
+          <span class="checkmark">Dinner Party</span>
         </label>
 
-        <label class="btn-border">
-          <input type="checkbox">
-          Dinner Party
-        </label>
-
-        <label class="btn-border">
-          <input type="checkbox">
-          The Banker
+        <label>
+          <input id="filler" type="checkbox">
+          <span class="checkmark">The Banker</span>
         </label>
         <!-- <input class="btn-border" type="button" name="" value="Phyllis' Wedding"> -->
         <!-- <input class="btn-border" type="button" name="" value="Dinner Party"> -->
@@ -97,12 +97,14 @@
       </div>
 
       <div class="links">
-        <a href="#"><img src="img/netflix-logo.png" alt="Netflix Logo"></a>
-        <a href="#"><img src="img/amazon.svg" alt="Amazon Logo"></a>
-        <a href="#"><img src="img/itunes.svg" alt="Apple Logo"></a>
-        <a href="#"><img src="img/google-play.svg" alt="Google Play Logo"></a>
-        <a href="#"><img src="img/imdb.svg" alt="IMDB Logo"></a>
+        <a href="#"><img class="disabled" src="img/netflix-logo.png" alt="Netflix Logo"></a>
+        <a href="#"><img class="disabled" src="img/amazon.svg" alt="Amazon Logo"></a>
+        <a href="#"><img src="img/iTunes_Store.png" alt="iTunes Store Logo"></a>
+        <a href="#"><img class="disabled" src="img/google-play.svg" alt="Google Play Logo"></a>
+        <a id="imdbHREF" href="#"><img src="img/imdb.svg" alt="IMDB Logo"></a>
       </div>
+      <p>Learn</p>
+      <p>Listen</p>
     </div>
 
     <div id="disqus_thread"></div>
@@ -113,8 +115,19 @@
 
     <footer>
       <p>Made with &#10084; by <a href="http://emre.la" target="_blank"> Emre.</a></p>
-      <p><a href="https://trakt.tv"  target="_blank"><img class="footerImage"src="img/trakt.svg" alt=""></a><a href="https://www.themoviedb.org"  target="_blank"><img class="footerImage"src="img/tmdb.svg" alt=""></a></p>
+      <p>Powered by <a href="http://trakt.tv" target="_blank" >Trakt.TV</a> & <a href="https://www.themoviedb.org" target="_blank">TMDb</a> </p>
+      <!-- <p><a href="https://trakt.tv"  target="_blank"><img class="footerImage"src="img/trakt.svg" alt=""></a><a href="https://www.themoviedb.org"  target="_blank"><img class="footerImage"src="img/tmdb.svg" alt=""></a></p> -->
+      <br>
+
+      <div class="coffee">
+        <a class="bmc-button" target="_blank" href="https://www.buymeacoffee.com/Emre">
+        <img src="https://www.buymeacoffee.com/assets/img/BMC-btn-logo.svg" alt="Buy me a coffee">
+        <span style="margin-left:5px">Buy me a coffee</span>
+        </a>
+      </div>
+
     </footer>
+
     <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script> -->
     <script src="js/main.js"></script>
 
