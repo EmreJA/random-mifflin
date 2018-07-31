@@ -2,7 +2,7 @@
 -------------------------------------------- */
 
 body {
-  background-color: #fafafa;
+  background-color: #f8f8f8;
   color: #262626;
   font-family: 'Open Sans', sans-serif;
   font-size: 1rem;
@@ -38,6 +38,10 @@ a {
   display: none;
 }
 
+.disabled {
+  opacity: 0.2;
+  cursor: default;
+}
 
 /* HEADER
 -------------------------------------------------------------------------------------------*/
@@ -134,19 +138,18 @@ input {
   outline: none;
 }
 
-blockquote {
-  width: 50%;
-  display: inline;
-}
+/* EPISODE CARD
+-------------------------------------------------------------------------------------------*/
 
 .infoCard {
   margin: auto;
   width: 400px;
 }
 
-#disqus_thread {
-  margin: auto;
-  width: 400px;
+#title {
+  line-height: 1;
+  display: inline-block;
+  border-bottom: 0.5rem solid #FED330;
 }
 
 .pic {
@@ -170,29 +173,6 @@ blockquote {
   text-align: justify;
 }
 
-#loadCom {
-  margin-top: 0.5rem;
-}
-
-#loadComments {
-  background-color: #5B00FF;
-  font-family: 'Open Sans', sans-serif;
-  color: white;
-  height: 1.5rem;
-  text-align: center;
-  border: none;
-  border-radius: 0.5rem;
-  text-decoration: none;
-  outline: none;
-  text-transform: uppercase;
-}
-
-#title {
-  line-height: 1;
-  display: inline-block;
-  border-bottom: 0.5rem solid #FED330;
-}
-
 .links {
   width: 400px;
   height: 3rem;
@@ -211,9 +191,29 @@ blockquote {
   height: 1.5rem;
 }
 
-.disabled {
-  opacity: 0.2;
-  cursor: default;
+/* COMMENTS
+-------------------------------------------------------------------------------------------*/
+
+#loadCom {
+  margin-top: 0.5rem;
+}
+
+#loadComments {
+  background-color: #5B00FF;
+  font-family: 'Open Sans', sans-serif;
+  color: white;
+  height: 1.5rem;
+  text-align: center;
+  border: none;
+  border-radius: 0.5rem;
+  text-decoration: none;
+  outline: none;
+  text-transform: uppercase;
+}
+
+#disqus_thread {
+  margin: auto;
+  width: 400px;
 }
 
 /* FOOTER
