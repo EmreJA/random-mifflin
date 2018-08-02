@@ -11,9 +11,9 @@ To-do:
 - (Maybe) Load comments for the episode: Disqus comments can be generated. User can "Load Comments"
 - (Maybe) Order of appearance amounts for charaters for that specific episode: Can use couple of APIs to generate. With character portraits.
 - (Maybe) 1 advertisement. Amazon Products related to The Office or Google Adsense.
--share buttons
--change page share meta according to the episode (title, description, thumb.)
--redbubble affiliate?
+- share buttons
+- change page share meta according to the episode (title, description, thumb.)
+- redbubble affiliate?
 */
 
 document.getElementById("randomMifflin").addEventListener("click", randomMifflin);
