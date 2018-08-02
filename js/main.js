@@ -19,8 +19,6 @@ To-do:
 document.getElementById("randomMifflin").addEventListener("click", randomMifflin);
 // document.getElementById("randomMifflin").addEventListener("click", showComm);
 document.getElementById("fltr").addEventListener("click", filterToggle);
-// document.getElementById("loadComments").addEventListener("click", showDisqus);
-
 
 var seasonNo;
 var episodeNo;
