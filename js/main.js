@@ -51,49 +51,51 @@ function getQueryVariable(variable) {
 //gets the url and splits it
 
 //Runs the random episode selector.
-function randomMifflin() {
-  // add loader
-
-  seasonNo = Math.ceil(Math.random() * 9);
-  if (seasonNo == 1) {
-    episodeNo = Math.ceil(Math.random() * 6);
-  } else if (seasonNo == 2) {
-    episodeNo = Math.ceil(Math.random() * 22);
-  } else if (seasonNo == 3) {
-    episodeNo = Math.ceil(Math.random() * 23);
-    //Phyllis' Wedding - Season 3 Episode 15
-    if (document.getElementById('phyllis').checked == true && episodeNo == 15) {
-      randomMifflin();
-      console.log("Phyllis' Wedding excluded. Rerunning the script.");
-    }
-  } else if (seasonNo == 4) {
-    episodeNo = Math.ceil(Math.random() * 14);
-    //Dinner Party - Season 4 Episode 13
-    if (document.getElementById('jan').checked == true && episodeNo == 13) {
-      randomMifflin();
-      console.log("Dinner Party excluded. Rerunning the script.");
-    };
-  } else if (seasonNo == 5) {
-    episodeNo = Math.ceil(Math.random() * 26);
-  } else if (seasonNo == 6) {
-    episodeNo = Math.ceil(Math.random() * 26);
-    //Scott's Tots - Season 6 Episode 12
-    if (document.getElementById('scott').checked == true && episodeNo == 12) {
-      randomMifflin();
-      console.log("Scott's Tots excluded. Rerunning the script.");
-    } else if (document.getElementById('scott').checked == true && episodeNo == 14) {
-      randomMifflin();
-      console.log("The Banker excluded. Rerunning the script.");
-    }
-    //The Banker - Season 6 Episode 14 (Filler Episode)
-  } else if (seasonNo == 7) {
-    episodeNo = Math.ceil(Math.random() * 24);
-  } else if (seasonNo == 8) {
-    episodeNo = Math.ceil(Math.random() * 24);
-  } else {
-    episodeNo = Math.ceil(Math.random() * 23);
-  }
-
+function randomMifflin(){
+  seasonNo = shuffle(9);
+  switch (seasonNo) {
+    case 1:
+      episodeNo = shuffle(6);
+      break;
+    case 2:
+      episodeNo = shuffle(22);
+      break;
+    case 3:
+      episodeNo = shuffle(23);
+      if (document.getElementById('phyllis').checked == true && episodeNo == 15) {
+        randomMifflin();
+      }
+      break;
+    case 4:
+      episodeNo = shuffle(14);
+      if (document.getElementById('jan').checked == true && episodeNo == 13) {
+        randomMifflin();
+      };
+      break;
+    case 5:
+      episodeNo = shuffle(26);
+      break;
+    case 6:
+      episodeNo = shuffle(26);
+      if (
+        (document.getElementById('scott').checked == true && episodeNo == 12) ||
+        (document.getElementById('scott').checked == true && episodeNo == 14)){
+        randomMifflin();
+      };
+      break;
+    case 7:
+      episodeNo = shuffle(24);
+      break;
+    case 8:
+      episodeNo = shuffle(24);
+      break;
+    case 9:
+      episodeNo = shuffle(23);
+      break;
+    default:
+      break;
+  };
+ 
   getURL() //get and change product urls
   changeTitle() //Change Page Title
   changeURL() // Change Page URL
@@ -101,7 +103,11 @@ function randomMifflin() {
   getInfo() //get episode info TRAKT API
   loadDisqus() //get disqus comments
 
-}
+};
+
+function shuffle (episodeCount){
+  return Math.ceil(Math.random() * episodeCount);
+};
 
 //gets amazon and itunes urls from db.json
 function getURL() {
