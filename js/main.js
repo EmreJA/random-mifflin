@@ -33,7 +33,6 @@ if (seasonNo && episodeNo !== undefined) {
   getURL() //get and change product urls
   getThumb() //get thumbnail TMDB API
   getInfo() //get episode info TRAKT API
-  // loadDisqus() //get disqus comments
 }
 
 //gets the url and splits it
@@ -94,7 +93,6 @@ function randomMifflin () {
   changeURL() // Change Page URL
   getThumb() //get thumbnail TMDB API
   getInfo() //get episode info TRAKT API
-  // loadDisqus() //get disqus comments
 
 };
 
@@ -173,40 +171,6 @@ function filterToggle() {
 }
 // Opens the filter menu. // DONE //
 
-//Shows comments button (needs a fix. after clicking again it becomes hidden.)
-// function showComm() {
-//   var element = document.getElementById("loadCom");
-//   if (element.classList.contains('hidden') == true) {
-//     element.classList.toggle('hidden');
-//   }
-// }
-
-//DISQUS
-// function loadDisqus() {
-//   var disqus_config = () => {
-//     this.page.identifier = pageURL; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
-//     console.log(this.page.identifier);
-//   };
-
-//   (function () { // DON'T EDIT BELOW THIS LINE
-//     var d = document,
-//       s = d.createElement('script');
-//     s.src = 'https://randommifflin.disqus.com/embed.js';
-//     s.setAttribute('data-timestamp', +new Date());
-//     (d.head || d.body).appendChild(s);
-//   })();
-// }; //DISQUS
-
-// function showDisqus(){
-//   var element = document.getElementById("disqus_thread");
-//   if (element.classList.contains('hidden') == true) {
-//     element.classList.remove('hidden');
-//     document.getElementById('loadComments').innerHTML = 'Hide Comments';
-//   } else {
-//     element.classList.add('hidden')
-//     document.getElementById('loadComments').innerHTML = 'Show Comments';
-//   }
-// }
 //Change Page Title // DONE
 function changeTitle() {
   var pageTitle = `Random Mifflin | Season ${seasonNo} Episode ${episodeNo}`;
@@ -221,4 +185,3 @@ function changeURL() {
   pageURL = `?s=${seasonNo}&e=${episodeNo}`; 
 }
 //change page URL
-
