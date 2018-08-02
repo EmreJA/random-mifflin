@@ -50,19 +50,22 @@ a {
 -------------------------------------------------------------------------------------------*/
 
 .header {
-  margin: 1em 0;
+  max-width: 320px;
+  display: block;
+  margin: 0 auto;
 }
 
 .header-title {
-  width: 300px;
-  margin: auto;
-  display: block;
+  max-width: 320px;
+  text-align: center;
+  margin-top: 1em;
 }
 
 .header-desc {
-  max-width: 400px;
-  display: block;
-  margin: 0.5em auto auto auto;
+  max-width: 100%;
+  text-align: justify;
+  margin-top: 0.5em;
+  margin-bottom: 1.5em;
 }
 
 /* FILTERS
