@@ -1,21 +1,3 @@
-/*
-To-do:
-- Exclude episodes
-- affiliate URL systems https://www.geni.us/
-- URL based generation with ? and disqus comments based on url.
-- Select season: if a season is selected, generate numbers only for that season. Also, disable options for episodes according to the selected season.
-- Info links for the episodes: Trakt.TV - IMDB - TVDB
-- Streaming Links for the episodes: Netflix - Itunes - Amazon - Google Play Movies
-- Google Analytics
-- (Maybe) Links for purchasing BoxSet etc.
-- (Maybe) Load comments for the episode: Disqus comments can be generated. User can "Load Comments"
-- (Maybe) Order of appearance amounts for charaters for that specific episode: Can use couple of APIs to generate. With character portraits.
-- (Maybe) 1 advertisement. Amazon Products related to The Office or Google Adsense.
-- share buttons
-- change page share meta according to the episode (title, description, thumb.)
-- redbubble affiliate?
-*/
-
 document.getElementById("randomMifflin").addEventListener("click", randomMifflin);
 // document.getElementById("randomMifflin").addEventListener("click", showComm);
 document.getElementById("fltr").addEventListener("click", filterToggle);
