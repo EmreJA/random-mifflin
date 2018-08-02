@@ -28,33 +28,66 @@
       <button type="button" id="randomMifflin" name="button"><span class="bold" id="buttonText">RANDOMIZE</span></button>
     </div>
 
+    <!-- <div class="hidden" id="filters"> -->
     <div class="hidden" id="filters">
-      <!-- <form action="">
+      <form class="season-exclude">
+        <div class="season-container">
+          <h2 class="filterTitle">Exclude Seasons</h2>
+          <label>
+              <input id="clearFilters" type="checkbox">
+              <span class="clear-btn">Clear</span>
+          </label>
 
-        <input class="btn-border" type="button" name="" value="Clear">
+          <label>
+              <input id="seasonOne" type="checkbox">
+              <span class="season-btn">1</span>
+          </label>
 
-        <input class="btn-border" type="button" name="" value="1">
+          <label>
+              <input id="seasonTwo" type="checkbox">
+              <span class="season-btn">2</span>
+          </label>
 
-        <input class="btn-border" type="button" name="" value="2">
+          <label>
+              <input id="seasonThree" type="checkbox">
+              <span class="season-btn">3</span>
+          </label>
+      
+          <label>
+              <input id="seasonFour" type="checkbox">
+              <span class="season-btn">4</span>
+          </label>
 
-        <input class="btn-border" type="button" name="" value="3">
+          <label>
+              <input id="seasonFive" type="checkbox">
+              <span class="season-btn">5</span>
+          </label>
 
-        <input class="btn-border" type="button" name="" value="4">
+          <label>
+              <input id="seasonSix" type="checkbox">
+              <span class="season-btn">6</span>
+          </label>
+      
+          <label>
+              <input id="seasonSeven" type="checkbox">
+              <span class="season-btn">7</span>
+          </label>
 
-        <input class="btn-border" type="button" name="" value="5">
+          <label>
+              <input id="seasonEight" type="checkbox">
+              <span class="season-btn">8</span>
+          </label>
 
-        <input class="btn-border" type="button" name="" value="6">
+          <label>
+              <input id="seasonNine" type="checkbox">
+              <span class="season-btn">9</span>
+          </label>       
+        </div>
+      </form>
 
-        <input class="btn-border" type="button" name="" value="7">
-
-        <input class="btn-border" type="button" name="" value="8">
-
-        <input class="btn-border" type="button" name="" value="9">
-
-      </form> -->
-      <p class="bold">Exclude Episodes</p>
+      <h2 class="filterTitle">Exclude Episodes</h2>
       <form class="episodeExc" action="">
-        <label class="test">
+        <label>
           <input id="scott" type="checkbox">
           <span class="checkmark">Scott's Tots</span>
         </label>
