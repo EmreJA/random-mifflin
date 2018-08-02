@@ -1,5 +1,8 @@
 # Random Mifflin | The Office Randomizer
 
+Ran-dom Miff-lin
+The people person's paper people!
+
 ### TO-DO List
 1. Season selection.
 2. Episode exclusion.
