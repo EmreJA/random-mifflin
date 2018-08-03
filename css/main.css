@@ -2,15 +2,16 @@
 -------------------------------------------- */
 
 body {
-  background-color: #f8f8f8;
-  color: #262626;
+  background-color: #fff;
+  color: rgba(0,0,0,.84);
   font-family: 'Open Sans', sans-serif;
   font-size: 1rem;
 }
 
 h1 {
   font-family: 'Lora', serif;
-  color: #5B00FF;
+  /* color: #5B00FF; */
+  color: rgba(0,0,0,.84);
   font-size: 2.5em;
   font-weight: 700;
   line-height: 1;
@@ -27,7 +28,12 @@ p {
 
 a {
   text-decoration: none;
-  color: #5B00FF;
+  font-weight: 600;
+  color: rgba(0,0,0,.84);
+}
+
+a:visited{
+  color: rgba(0,0,0,.84);
 }
 
 .bold {
@@ -41,6 +47,7 @@ a {
 .disabled {
   opacity: 0.2;
   cursor: default;
+  filter: grayscale(100%);
 }
 
 .red {
@@ -59,6 +66,7 @@ a {
   max-width: 320px;
   text-align: center;
   margin-top: 1em;
+
 }
 
 .header-desc {
@@ -89,6 +97,7 @@ a {
 }
 .season-container {
   width: 100%;
+  text-align: left;
 }
 .season-exclude input {
   opacity: 0;
@@ -162,7 +171,6 @@ label input:checked~.checkmark {
   border-bottom: 0.5rem solid #5B00FF;
 }
 
-
 /* RANDOMIZE
 -------------------------------------------------------------------------------------------*/
 
@@ -182,6 +190,7 @@ label input:checked~.checkmark {
   border-radius: 0.5rem;
   text-decoration: none;
   outline: none;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
 }
 
 /* EPISODE CARD
@@ -194,8 +203,9 @@ label input:checked~.checkmark {
 
 #title {
   line-height: 1;
-  display: inline-block;
+  font-size: 1.8em;
   border-bottom: 0.5rem solid #FED330;
+  display: inline-block;
 }
 
 .pic {
@@ -205,7 +215,8 @@ label input:checked~.checkmark {
 }
 
 #thumbnail {
-  border: 0.5rem solid #02EBCD;
+  border: 0.5rem solid rgba(0,0,0,.84);
+  filter: grayscale(100%);
   max-width: 100%;
   height: auto;
 }
@@ -220,17 +231,18 @@ label input:checked~.checkmark {
 }
 
 .links {
-  width: 400px;
-  height: 3rem;
+  background-color: #fff;
+  max-width: 320px;
+  height: 4em;
   margin: auto;
-  margin-top: 1rem;
+  margin-top: 1em;
   text-align: center;
 }
 
 .links img {
   height: 2em;
   margin-right: 1em;
-  vertical-align: middle;
+  margin-top: 1em;
 }
 
 .links img:active {
