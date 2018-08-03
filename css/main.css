@@ -72,6 +72,9 @@ a {
 
 /* FILTERS
 -------------------------------------------------------------------------------------------*/
+#filterIcon {
+  height: 2em;
+}
 
 .filterTitle{
   font-size: 1em;
@@ -97,7 +100,7 @@ a {
   font-weight: 600;
   color: white;
   width: 4em;
-  height: 2em;
+  height: 1.6em;
   display: inline-block;
   text-align: center;
   border-radius: 5px;
@@ -108,18 +111,30 @@ a {
   color: #2d3436;
   font-weight: 600;
   width: 2em;
-  height: 2em;
+  height: 1.6em;
   display: inline-block;
   text-align: center;
   border-radius: 5px;
   margin-top: 0.5em;
 }
 
+.episode-btn {
+  border:2px solid #FED330;
+  color: #2d3436;
+  font-weight: 600;
+  width: 9em;
+  height: 1.6em;
+  display: inline-block;
+  text-align: center;
+  border-radius: 5px;
+  margin-top: 0.5em;
+}
 
 .filtersButton {
   display: flex;
   justify-content: center;
   align-items: center;
+  margin-top: -0.5em;
 }
 
 #fltr {
@@ -128,24 +143,14 @@ a {
   cursor: pointer;
 }
 
-
-#filterIcon {
-  height: 2em;
-}
-
 #filters {
-  width: 450px;
-  text-align: center;
+  max-width: 300px;
   margin: auto;
-  margin-top: 0.5rem;
-}
-
-.episodeExc label {
-  margin-right: 0.5rem;
 }
 
 .checkmark {
-  border-bottom: 0.5rem solid #FED330;
+  border: 2px solid #FED330;;
+  border-radius: 10px;
 }
 
 .episodeExc input {
@@ -157,16 +162,6 @@ label input:checked~.checkmark {
   border-bottom: 0.5rem solid #5B00FF;
 }
 
-label {
-  margin-bottom: 10rem;
-  line-height: 2;
-}
-
-input {
-  font-family: 'Open Sans', sans-serif;
-  font-size: 1rem;
-  height: 2rem;
-}
 
 /* RANDOMIZE
 -------------------------------------------------------------------------------------------*/
@@ -248,14 +243,13 @@ input {
 footer {
   display: block;
   margin: 0 auto;
-  max-width: 416px;
+  max-width: 300px;
   margin: auto;
-  font-size: 1rem;
-  text-align: right;
+  font-size: 1em;
   line-height: 1;
 }
 .footer-box {
-  margin-top: 3em;
+  margin-top: 2em;
   margin-right: 1em;
 }
 
@@ -264,14 +258,6 @@ footer p {
   font-size: 0.82rem;
   margin-top: 0.5rem;
 }
-
-/* .footerImage {
-  height: 2rem;
-  margin-top: 0.5rem;
-  vertical-align: middle;
-  margin-right: 0.6rem;
-} */
-
 
 /* BUY ME A COFFEE BUTTON 
 -------------------------------------------------------------------------------------------*/
