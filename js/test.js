@@ -7,9 +7,7 @@ seasonNo = getQueryVariable('s');
 episodeNo = getQueryVariable('e');
 
 if (seasonNo && episodeNo !== undefined) {
-  getURL() //get and change product urls
-  getThumb() //get thumbnail TMDB API
-  getInfo() //get episode info TRAKT API
+  getURL(), getThumb(), getInfo();
 }
 
 //gets the url and splits it
@@ -65,11 +63,13 @@ function randomMifflin () {
       break;
   };
  
-  getURL() //get and change product urls
-  changeTitle() //Change Page Title
-  changeURL() // Change Page URL
-  getThumb() //get thumbnail TMDB API
-  getInfo() //get episode info TRAKT API
+  getURL(), changeTitle(), changeURL(), getThumb(), getInfo();
+
+  //get and change product urls
+  //Change Page Title
+  // Change Page URL
+  //get thumbnail TMDB API
+  //get episode info TRAKT API
 
 };
 
