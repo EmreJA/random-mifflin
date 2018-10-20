@@ -1,5 +1,4 @@
 document.getElementById("randomMifflin").addEventListener("click", randomMifflin);
-// document.getElementById("randomMifflin").addEventListener("click", showComm);
 document.getElementById("fltr").addEventListener("click", filterToggle);
 
 var seasonNo, episodeNo, pageURL, urlData;
@@ -29,6 +28,9 @@ function getQueryVariable(variable) {
 //Runs the random episode selector.
 function randomMifflin () {
   seasonNo = shuffle(9);
+  // if (seasonNo == ) {
+    
+  // }
   switch (seasonNo) {
     case 1:
       episodeNo = shuffle(6);
@@ -73,6 +75,7 @@ function randomMifflin () {
 
 };
 
+// random math stuff
 function shuffle (episodeCount){
   return Math.floor(Math.random() * episodeCount) + 1;
 };
@@ -83,6 +86,15 @@ function episodeFilter (elementID, filteredEpisodeNo) {
     randomMifflin();
   }
 };
+
+// function seasonFilter (elementID, filteredSeasonNo) {
+//   if (document.getElementById(elementID).checked == true && seasonNo == filteredSeasonNo) {
+//     console.log(`Season ${filteredSeasonNo} detected, rerunning the script.`);
+//     randomMifflin();
+//   }
+// };
+
+
 //gets amazon and itunes urls from db.json
 function getURL() {
   var dataRequest = new XMLHttpRequest();

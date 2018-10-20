@@ -139,6 +139,10 @@ a:visited{
   margin-top: 0.5em;
 }
 
+input:checked + .episode-btn {
+  background-color: #FED330;
+}
+
 .filtersButton {
   display: flex;
   justify-content: center;
