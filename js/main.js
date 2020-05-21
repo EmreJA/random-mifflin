@@ -1,5 +1,5 @@
 document.getElementById("randomMifflin").addEventListener("click", randomMifflin);
-document.getElementById("fltr").addEventListener("click", filterToggle);
+// document.getElementById("fltr").addEventListener("click", filterToggle);
 
 var seasonNo, episodeNo, pageURL, urlData;
 seasonNo = getQueryVariable('s');
@@ -26,10 +26,10 @@ function getQueryVariable(variable) {
 //gets the url and splits it
 
 //Runs the random episode selector.
-function randomMifflin () {
+function randomMifflin() {
   seasonNo = shuffle(9);
   // if (seasonNo == ) {
-    
+
   // }
   switch (seasonNo) {
     case 1:
@@ -40,19 +40,19 @@ function randomMifflin () {
       break;
     case 3:
       episodeNo = shuffle(23);
-      episodeFilter ('phyllis', 15);
+      episodeFilter('phyllis', 15);
       break;
     case 4:
       episodeNo = shuffle(14);
-      episodeFilter ('jan', 13);
+      episodeFilter('jan', 13);
       break;
     case 5:
       episodeNo = shuffle(26);
       break;
     case 6:
       episodeNo = shuffle(26);
-      episodeFilter ('scott', 12);
-      episodeFilter ('filler', 14);
+      episodeFilter('scott', 12);
+      episodeFilter('filler', 14);
       break;
     case 7:
       episodeNo = shuffle(24);
@@ -66,7 +66,7 @@ function randomMifflin () {
     default:
       break;
   };
- 
+
   getURL() //get and change product urls
   changeTitle() //Change Page Title
   changeURL() // Change Page URL
@@ -76,11 +76,11 @@ function randomMifflin () {
 };
 
 // random math stuff
-function shuffle (episodeCount){
+function shuffle(episodeCount) {
   return Math.floor(Math.random() * episodeCount) + 1;
 };
 
-function episodeFilter (elementID, filteredEpisodeNo) {
+function episodeFilter(elementID, filteredEpisodeNo) {
   if (document.getElementById(elementID).checked == true && episodeNo == filteredEpisodeNo) {
     console.log(`Episode ${filteredEpisodeNo} detected, rerunning the script.`);
     randomMifflin();
@@ -140,7 +140,6 @@ function getInfo() {
       document.getElementById('seasonInfo').innerHTML = response.season;
       document.getElementById('episodeInfo').innerHTML = response.number;
       document.getElementById('overview').innerHTML = response.overview;
-      document.getElementById('imdbHREF').href = `https://www.imdb.com/title/${response.ids.imdb}`;
       var element = document.getElementById("info");
 
       if (element.classList.contains('hidden') == true) {
@@ -154,10 +153,10 @@ function getInfo() {
 // Trakt API - Gets the information of the random episode.
 
 // Opens the filter menu. // DONE //
-function filterToggle() {
-  var element = document.getElementById("filters");
-  element.classList.toggle('hidden');
-}
+// function filterToggle() {
+//   var element = document.getElementById("filters");
+//   element.classList.toggle('hidden');
+// }
 // Opens the filter menu. // DONE //
 
 //Change Page Title // DONE
@@ -171,6 +170,6 @@ function changeTitle() {
 //change page URL
 function changeURL() {
   history.pushState(null, '', `?s=${seasonNo}&e=${episodeNo}`);
-  pageURL = `?s=${seasonNo}&e=${episodeNo}`; 
+  pageURL = `?s=${seasonNo}&e=${episodeNo}`;
 }
 //change page URL

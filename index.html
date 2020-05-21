@@ -1,173 +1,184 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <!-- Global site tag (gtag.js) - Google Analytics -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-127795926-1"></script>
-    <script>
-      window.dataLayer = window.dataLayer || [];
-      function gtag(){dataLayer.push(arguments);}
-      gtag('js', new Date());
 
-      gtag('config', 'UA-127795926-1');
-    </script>
-    <meta charset="utf-8">
-    <title>Random Mifflin | Dinkin Flicka!</title>
-    <meta name="description" content="A random episode generator for the best tv show ever, The Office">
-    <meta name="author" content="Emre C. Aydin">
-    <meta name="theme-color" content="#02EBCD" />
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link href="https://fonts.googleapis.com/css?family=Lora:700|Open+Sans:400,700" rel="stylesheet">
-    <link rel="stylesheet" href="css/reset.css">
-    <link rel="stylesheet" href="css/main.css">
-  </head>
+<head>
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=UA-127795926-1"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() { dataLayer.push(arguments); }
+    gtag('js', new Date());
 
-  <body>
+    gtag('config', 'UA-127795926-1');
+  </script>
+  <meta charset="utf-8">
+  <title>Random Mifflin | Dinkin Flicka!</title>
+  <meta name="description" content="A random episode generator for the best tv show ever, The Office">
+  <meta name="author" content="Emre C. Aydin">
+  <meta name="theme-color" content="#02EBCD" />
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link href="https://fonts.googleapis.com/css2?family=EB+Garamond&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/reset.css">
+  <link rel="stylesheet" href="css/main.css">
+</head>
 
-    <div class="header">
-      <div class="header-title">
-        <h1>Random Mifflin</h1>
-      </div>
-      <div class="header-desc">  
-        <p>A random episode generator for the best TV show ever made;<span class="bold"> The Office</span>.</p>
-      </div>
+<body>
+
+  <div class="header">
+    <div class="header-title">
+      <h1 class="title">Random Mifflin</h1>
+    </div>
+    <hr>
+    <div class="header-desc">
+      <p>Random Mifflin is a random episode generator for the acclaimed TV show The Office (US).</p>
+    </div>
+  </div>
+
+  <!-- <div class="hidden" id="filters"> -->
+  <!-- <div id="filters"> -->
+  <!-- <form class="season-exclude">
+          <div class="season-container">
+            <h2 class="filterTitle">Exclude Seasons</h2>
+            <label>
+                <input id="clearFilters" type="checkbox">
+                <span class="clear-btn">Clear</span>
+            </label>
+  
+            <label>
+                <input id="seasonOne" type="checkbox">
+                <span class="season-btn">1</span>
+            </label>
+  
+            <label>
+                <input id="seasonTwo" type="checkbox">
+                <span class="season-btn">2</span>
+            </label>
+  
+            <label>
+                <input id="seasonThree" type="checkbox">
+                <span class="season-btn">3</span>
+            </label>
+        
+            <label>
+                <input id="seasonFour" type="checkbox">
+                <span class="season-btn">4</span>
+            </label>
+  
+            <label>
+                <input id="seasonFive" type="checkbox">
+                <span class="season-btn">5</span>
+            </label>
+  
+            <label>
+                <input id="seasonSix" type="checkbox">
+                <span class="season-btn">6</span>
+            </label>
+        
+            <label>
+                <input id="seasonSeven" type="checkbox">
+                <span class="season-btn">7</span>
+            </label>
+  
+            <label>
+                <input id="seasonEight" type="checkbox">
+                <span class="season-btn">8</span>
+            </label>
+  
+            <label>
+                <input id="seasonNine" type="checkbox">
+                <span class="season-btn">9</span>
+            </label>       
+          </div>
+        </form> -->
+
+  <!-- episodeExc -->
+  <div class="season-container">
+    <form class="season-exclude" action="">
+
+      <label>
+        <input type="checkbox">
+        <span class="exclude">Exclude</span>
+      </label>
+
+      <label>
+        <input id="scott" type="checkbox">
+        <span class="episode-btn">Scott's Tots</span>
+      </label>
+
+
+      <label>
+        <input id="phyllis" type="checkbox">
+        <span class="episode-btn">Phyllis' Wedding</span>
+      </label>
+
+      <label>
+        <input id="jan" type="checkbox">
+        <span class="episode-btn">Dinner Party</span>
+      </label>
+
+      <label>
+        <input id="filler" type="checkbox">
+        <span class="episode-btn">The Banker</span>
+      </label>
+
+    </form>
+  </div>
+  <!-- </div> -->
+
+  <div class="button-container">
+    <button type="button" id="randomMifflin" name="button"><span class="bold" id="buttonText">Generate
+        Episode</span></button>
+  </div>
+
+
+
+  <div class="infoCard hidden" id="info">
+
+    <div class="pic">
+      <hr>
+      <img id="thumbnail" src="" alt="">
+      <hr>
     </div>
 
-    <div class="filtersButton">
-      <img id="fltr" src="img/filter.svg" alt="Filter Icon">
-      <button type="button" id="randomMifflin" name="button"><span class="bold" id="buttonText">RANDOMIZE</span></button>
+    <h2 id="title"></h2>
+
+    <div class="meta">
+      <p>
+        📺 S<span id="seasonInfo"></span>E<span id="episodeInfo"></span>
+        ⏱ <span id="runtime"></span>
+        ✨ <span id="rating"></span>
+      </p>
     </div>
 
-    <!-- <div class="hidden" id="filters"> -->
-    <div class="hidden" id="filters">
-      <!-- <form class="season-exclude">
-        <div class="season-container">
-          <h2 class="filterTitle">Exclude Seasons</h2>
-          <label>
-              <input id="clearFilters" type="checkbox">
-              <span class="clear-btn">Clear</span>
-          </label>
-
-          <label>
-              <input id="seasonOne" type="checkbox">
-              <span class="season-btn">1</span>
-          </label>
-
-          <label>
-              <input id="seasonTwo" type="checkbox">
-              <span class="season-btn">2</span>
-          </label>
-
-          <label>
-              <input id="seasonThree" type="checkbox">
-              <span class="season-btn">3</span>
-          </label>
-      
-          <label>
-              <input id="seasonFour" type="checkbox">
-              <span class="season-btn">4</span>
-          </label>
-
-          <label>
-              <input id="seasonFive" type="checkbox">
-              <span class="season-btn">5</span>
-          </label>
-
-          <label>
-              <input id="seasonSix" type="checkbox">
-              <span class="season-btn">6</span>
-          </label>
-      
-          <label>
-              <input id="seasonSeven" type="checkbox">
-              <span class="season-btn">7</span>
-          </label>
-
-          <label>
-              <input id="seasonEight" type="checkbox">
-              <span class="season-btn">8</span>
-          </label>
-
-          <label>
-              <input id="seasonNine" type="checkbox">
-              <span class="season-btn">9</span>
-          </label>       
-        </div>
-      </form> -->
-
-      <!-- episodeExc -->
-      <form class="season-exclude" action="">
-        <div class="season-container">
-          <h2 class="filterTitle">Exclude Episodes</h2>
-          <label>
-            <input id="scott" type="checkbox">
-            <span class="episode-btn">Scott's Tots</span>
-          </label>
-          <label>
-            <input id="phyllis" type="checkbox">
-            <span class="episode-btn">Phyllis' Wedding</span>
-          </label>
-          <br>
-          <label>
-            <input id="jan" type="checkbox">
-            <span class="episode-btn">Dinner Party</span>
-          </label>
-
-          <label>
-            <input id="filler" type="checkbox">
-            <span class="episode-btn">The Banker</span>
-          </label>
-        </div>
-      </form>
+    <div class="information">
+      <p id="overview"></p>
     </div>
 
-    <div class="infoCard hidden" id="info">
-
-      <div class="pic">
-        <img id="thumbnail" src="" alt="">
-      </div>
-
-      <h2 id="title"></h2>
-
-      <div class="meta">
-        <p>
-          S<span id="seasonInfo"></span>E<span id="episodeInfo"></span> |
-          <span class="bold">Runtime </span><span id="runtime"></span> |
-          <span class="bold">Score </span><span id="rating"></span>
-        </p>
-      </div>
-
-      <div class="information">
-        <p id="overview"></p>
-      </div>
-
-      <div class="links">
-        <a href="#"><img class="disabled" src="img/netflix-logo.png" alt="Netflix Logo"></a>
-        <a id="aHREF" href="#" target="_blank"><img src="img/amazon.svg" alt="Amazon Logo"></a>
-        <a id="iHREF" href="#" target="_blank"><img src="img/iTunes_Store.png" alt="iTunes Store Logo"></a>
-        <a href="#"><img class="disabled" src="img/google-play.svg" alt="Google Play Logo"></a>
-        <a id="imdbHREF" href="#" target="_blank"><img src="img/imdb.svg" alt="IMDB Logo"></a>
-      </div>
+    <div class="links">
+      <a class="watch" href="#">Watch</a>
+      <a class="disabled watch-links">Netflix</a>
+      <a id="aHREF" class="watch-links" href="#" target="_blank">Amazon</a>
+      <a id="iHREF" class="watch-links" href="#" target="_blank">iTunes</a>
+      <a class="disabled watch-links" href="#">Google Play</a>
     </div>
+  </div>
+  <footer>
+    <hr>
+    <div class="footer-box">
+      <p>Random Mifflin is made with 💖 by <a target="_blank" class="text-link" href="https://emre.la">Emre</a> and
+        powered by <a target="_blank" class="text-link" href="https://trakt.tv/users/emrecaydin">Trakt.TV</a> & <a
+          class="text-link" target="_blank" href="">TMDb
+          API</a>s. Feel
+        free to improve upon the website on <a target="_blank" class="text-link" href="">GitHub</a>. You can also <a
+          class="text-link" target="_blank" href="https://www.buymeacoffee.com/Emre">buy me a coffee</a>
+        if you feel like it.</p>
+      <br>
 
-    <footer>
-      <div class="footer-box">
-        <p>Made with <span>❤️</span> by <a href="http://emre.la" target="_blank"> Emre.</a></p>
-        <p>Powered by <a href="http://trakt.tv" target="_blank" >Trakt.TV</a> & <a href="https://www.themoviedb.org" target="_blank">TMDb</a> </p>
-        <br>
+    </div>
+  </footer>
+  <script src="js/main.js"></script>
+  <script type="application/json" src="js/db.json"></script>
 
-        <div class="coffee">
-          <a class="bmc-button" target="_blank" href="https://www.buymeacoffee.com/Emre">
-          <img src="https://www.buymeacoffee.com/assets/img/BMC-btn-logo.svg" alt="Buy me a coffee">
-          <span style="margin-left:5px">Buy me a coffee</span>
-          </a>
-        </div>
-      </div>
-    </footer>
-    <script src="js/main.js"></script>
-    <script type="application/json" src="js/db.json"></script>
-
-
-
-  </body>
+</body>
 
 </html>
