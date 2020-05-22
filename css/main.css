@@ -1,6 +1,5 @@
 /* general
 -------------------------------------------- */
-
 body {
   background-color: #161616;
   color: #FFFFFF;
@@ -11,6 +10,7 @@ body {
 hr {
   border: 3px solid;
 }
+
 h1 {
   font-family: Helvetica, sans-serif;
   text-transform: uppercase;
@@ -26,7 +26,6 @@ h2 {
   font-size: 2em;
 }
 
-
 .text-link {
   color: #696969;
   font-weight: bold;
@@ -37,9 +36,6 @@ h2 {
   font-style: italic;
   color: #FFFFFF;
 }
-/* .text-link:visited {
-  color: #696969;
-} */
 
 .bold {
   font-family: Helvetica, sans-serif;
@@ -85,47 +81,15 @@ h2 {
 /* FILTERS
 -------------------------------------------------------------------------------------------*/
 
-/* #filters {
-  max-width: 524px;
-  margin: auto;
-  display: inline;
-} */
-
 .season-exclude {
   width:524px;
   margin: auto;
 }
 
-/* .season-container {
-  width: 100%;
-} */
-
 .season-exclude input {
   opacity: 0;
   margin-right: -15px;
 }
-/* .clear-btn {
-  background-color: #5B00FF;
-  font-weight: 600;
-  color: white;
-  width: 4em;
-  height: 1.6em;
-  display: inline-block;
-  text-align: center;
-  border-radius: 5px;
-  margin-top: 0.5em;
-} */
-/* .season-btn {
-  border:2px solid #FED330;
-  color: #2d3436;
-  font-weight: 600;
-  width: 2em;
-  height: 1.6em;
-  display: inline-block;
-  text-align: center;
-  border-radius: 5px;
-  margin-top: 0.5em;
-} */
 
 .episode-btn {
   font-family: Helvetica, sans-serif;
